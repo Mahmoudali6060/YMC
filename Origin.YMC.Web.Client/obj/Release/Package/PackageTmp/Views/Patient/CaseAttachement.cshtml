@@ -1,0 +1,145 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout_blank_.cshtml";
+}
+
+<style>
+    #ulcertificationImages img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #btnUploadPIC label {
+        width: 300px !important
+    }
+</style>
+
+@using (Html.BeginForm("CaseAttachement", "Patient", FormMethod.Post, new { enctype = "multipart/form-data", id = "CaseAttachementForm" }))
+{
+
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="CaseId" value='@Request.QueryString["CaseId"]' />
+    <section class="wizard cardiology-section">
+        <div id="content" class="content">
+            <section class="wizard cardiology-section">
+                <div class="container">
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="padding-30 mega-container box-shadow radius-border">
+                                <h1 class="section-title sub-section-title text-center fadeInLeft wow" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <span class="blue-font-light sep-before">
+                                        3. @Resources.GlobalStrings.Submit_Medical_Records_and_Required_Documents
+                                    </span>
+                                </h1>
+                                <div class="input-group">
+                                    <ul id="imgs"></ul>
+                                </div>
+                                @*<h3 class="text-center Upload-title text-uppercase black-text">Upload </h3>*@
+                                <div class="row">
+
+                                    @*<ul class="docs-list text-left col-xs-12" id="ulcertificationImages" style=""></ul>*@
+                                    <label class="input-group-btn col-xs-12"></label>
+                                    <div class="dropzone" id="btnUploadPIC">
+                                        <input type="file" multiple="multiple" style="visibility:hidden" value="" />
+                                    </div>
+                                    <span id="lblErrUploadCerts" style="display:none;color:red !important;">@Resources.GlobalStrings.kindlyUploadDocuments</span>
+                                    <input type="hidden" id="hdnCertificates" name="AttachmentCertificates" value="" />
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <input type="button" class="login100-form-btn decline-form-btn" value="@Resources.GlobalStrings.Cancel" />
+                                <input type="button" class="login100-form-btn" id="btn-save" value="@Resources.GlobalStrings.Next"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+}
+
+@section Scripts{
+    <script>
+        var myDropzone = new Dropzone("div#btnUploadPIC", { url: "/home/uploadcertificate", method: "post" , dictDefaultMessage: "@Resources.GlobalStrings.Drag_and_drop_or_click_here" })
+        Dropzone.options.maxFilesize = 4;
+        myDropzone.on("complete", function (file) {
+            var pdfType = "application/pdf";
+            var wordType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+            var imageType = "image";
+            var iconPath = "";
+            if (file.type.toLowerCase().indexOf(pdfType) > -1) {
+                iconPath = "/Content/img/documnet.png";
+            } else if (file.type.toLowerCase().indexOf(imageType) > -1) {
+                iconPath = file.xhr.response;
+
+            } else if (file.type.toLowerCase().indexOf(wordType) > -1) {
+                iconPath = "/content/img/word-document-icon.png"
+ 
+            } else {
+                iconPath = "/content/img/certifications-icon.png";
+            }
+            if (file.size <= Dropzone.options.maxFilesize * 1024 * 1024) {
+
+                $("#imgs").append("<li style='position: relative;display: inline-block;float: left;width: 100px;'><span class='fa fa-close' style='position: absolute;left: 20px;background-color:white;' onclick='$(this).parent().remove();'></span><a href='" + file.xhr.response+"' target='_blank'><img src='" + iconPath + "' data-fpath='" + file.xhr.response + "' width='70' height='70' /></a></li>")
+                myDropzone.removeFile(file);
+                $("#lblErrUploadCerts").hide();
+            }
+        });
+        myDropzone.on("error", function (file) {
+ 
+                myDropzone.removeFile(file);
+                toastr.error("Error file type detected")
+            
+        });
+
+
+        $("#btn-save").click(function (evt) {
+
+            $("#imgs").find("img").each(function () {
+                $("#hdnCertificates").val($("#hdnCertificates").val() + ";#" + $(this).attr("data-fpath"));
+            })
+            if ($("#hdnCertificates").val() == "") {
+                $("#lblErrUploadCerts").show();
+                isValid = false;
+            } else {
+                $("#lblErrUploadCerts").hide();
+                $("#CaseAttachementForm").submit();
+            }
+
+        });
+
+                //function oncloseimageclick(closeCtrl) {
+                //   //
+                //    var files = $('#btnUploadPIC')[0].files;
+                //    var indexToRemove = $("#ulcertificationImages").find("li").toArray().indexOf($(closeCtrl).parent()[0])
+                //    $('#btnUploadPIC')[0].files = files.splice(indexToRemove, 1);
+                //    $(closeCtrl).parent().remove();
+
+                //}
+                //<img src="../Content/img/close-cir-2.png" width="25" height="25" style="position:absolute;left:0" onclick="oncloseimageclick(this)">
+                //$('#btnUploadPIC').change(function (e) {
+
+                //    $('#ulcertificationImages').html("");
+                //    for (var i = 0; i < e.target.files.length; i++) {
+                //        if (e.target.files && e.target.files[i]) {
+                //            var reader = new FileReader();
+                //            reader.onload = function (e) {
+                //                $('#ulcertificationImages').append('<li><img src="' + e.target.result + '" width="200" height="200" style="margin:1%"></li>');
+                //            }
+                //            reader.readAsDataURL(e.target.files[i]);
+                //        }
+                //    }
+
+                //});
+     
+    </script>
+}

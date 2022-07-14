@@ -1,0 +1,225 @@
+﻿@model Origin.YMC.Business.Entities.Domain.Doctors.ViewModel.DoctorViewModels
+@{
+    /**/
+
+    ViewBag.Title = "Doctors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<!-- /.row -->
+<div class="row" style="padding-top: 12px;">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="loading">
+                    <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br />
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Doctors
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <table width="100%" class="table table-striped table-bordered table-hover" id="dt_Doctor_bind"></table>
+
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+<!-- /.col-lg-12 -->
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            var table = $('#dt_Doctor_bind').dataTable({
+                responsive: true,
+                serverSide: true,
+                processing: true,
+                filter: true,
+                orderMulti: false,
+                order: [],
+                lengthMenu: [10, 25, 50, 75, 100],
+                dom: 'Blfrtip',
+                buttons: [
+                    { extend: 'copyHtml5' },
+                    { extend: 'excelHtml5' },
+                    { extend: 'csvHtml5' },
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL',
+                        text: 'PDF',
+                        titleAttr: 'PDF',
+                        
+                    },
+                    { extend: 'print' }
+                ],
+                ajax: {
+                    url: "/Doctor/PageData/",
+                    type: "POST"
+                },
+                columns: [
+                    {
+                        name: 'firstName',
+                        data: "firstName",
+                        title: "Full Name",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return '<a href="/Doctor/DoctorProfile?profileid=' + row.id + '">' + row.firstName + ' ' + row.lastName + '</a>';
+                        }
+                    },
+                    {
+                        name: 'specialtyName',
+                        data: "specialtyName",
+                        title: "Specialty Name",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return data;
+                        }
+                    },
+                    {
+                        name: 'email',
+                        data: "email",
+                        title: "Email",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return data;
+                        }
+                    },
+                    {
+                        name: 'day',
+                        data: "day",
+                        title: "Date Of Birth",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return '<span>' + row.day + '-' + row.month + '-' + row.year + '</span>';
+                        }
+                    },
+                    {
+                        name: 'cityName',
+                        data: "cityName",
+                        title: "City Name",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return data;
+                        }
+                    },
+                    {
+
+                        name: 'nonUsStateOrProvince',
+                        data: "nonUsStateOrProvince",
+                        title: "Non Us State Or Province",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return data;
+                        }
+                    },
+                    {
+
+                        name: 'address1',
+                        data: "address1",
+                        title: "Address 1",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return data;
+                        }
+                    },
+                    {
+
+                        name: 'mobilePhone',
+                        data: "mobilePhone",
+                        title: "Mobile Phone",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return data;
+                        }
+                    },
+                    {
+
+                        name: 'heardAboutUsId',
+                        data: "heardAboutUsId",
+                        title: "Heard About Us",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            var heardAboutUsCollection=JSON.parse('@Html.Raw(Json.Encode(Origin.YMC.Core.Content.StaticContent.GetAllHeardAboutUs().Select(c => new { c.Value, c.Name }).ToArray()))');
+                            return heardAboutUsCollection.find(x => x.Value === data).Name;
+                        }
+                    },
+                    {
+                        name: 'creationDate',
+                        data: "creationDate",
+                        title: "Creation Date",
+                        sortable: false,
+                        searchable: false,
+                        "render": function (data, type, row, meta) {
+                            return moment(data).format('DD-MM-YYYY');
+                        }
+                    },
+                    {
+                        name: 'id',
+                        data: "id",
+                        title: "Action",
+                        sortable: false,
+                        searchable: false,
+                        width: "15%",
+                        "render": function (data, type, row, meta) {
+
+                            var titleActive = row.isActive ? "Deactivate" : "Active";
+                            var classCss = row.isActive ? "btn-danger" : "btn-success";
+
+                            var result = '<a data-ajax="true" data-ajax-method="GET" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailure" data-ajax-success="Active" class="btn btn-sm ' + classCss + '"  href="/Doctor/Deactive_Activate/' + data + '">' + titleActive + '</a>';
+                            return result;
+                        }
+                    }
+                ]
+
+            });
+            $.fn.dataTable.ext.errMode = 'throw';
+            $('#myFilter').donetyping(function () {
+                var value = $(this).val();
+                $('#dt_Doctor_bind').dataTable().fnFilter(value);
+            });
+        });
+
+
+
+
+
+        function Active() {
+            ShowTostNotification();
+            $('#dt_Doctor_bind').DataTable().ajax.reload();
+        }
+
+    </script>
+
+
+}

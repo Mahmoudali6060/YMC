@@ -1,0 +1,138 @@
+﻿@using Origin.YMC.Business.Entities.Domain.Partation.ViewModels;
+@using Origin.YMC.Business.Entities.Domain.Partation;
+@{
+    Layout = "~/Views/Shared/_Layout_blank.cshtml";
+    ViewBag.PageActiveNumber = 2;
+}
+
+<div id="content" class="content">
+    <section class="events-sec  how-it-bg">
+        <div class="container">
+            <!-- .row -->
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <h1 class="section-title why-title fadeInLeft wow" data-wow-delay="0.5s">
+                        <div class="blue-font-light">
+                            @Resources.GlobalStrings.HOW
+                        </div>
+                        <span class="blue-font-black sep-before">
+                            @Resources.GlobalStrings.IT_WORKS
+                        </span>
+                    </h1>
+                    <p class="para-style fadeInUp wow" data-wow-delay="0.5s">
+                        @if (ApplicationContext.IsArabic)
+                        {
+                            @ViewBag._howITWORKSPartation.ContentAr
+
+                        }
+                        else
+                        {
+                            @ViewBag._howITWORKSPartation.ContentEn
+
+                        }
+                    </p>
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <div class="cards-section">
+                        <div class="card-deck">
+                            <div class="card card1 justify-content-center wow animated fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay:1s; animation-name:fadeInUp;">
+                                <div class="text-center ">
+                                    <div class="row justify-content-center">
+                                        <img class="cir1 img-responsive" src="~/Content/img/cir1.png">
+                                        <img class="d-block img-responsive" src="~/Content/img/pic1.png">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-text text-center text-uppercase">@Resources.GlobalStrings.Find_a_doctor</h6>
+                                    <p>
+
+                                        @if (ApplicationContext.IsArabic)
+                                        {
+                                            @ViewBag._findADOCTORPartation.ContentAr
+
+                                        }
+                                        else
+                                        {
+                                            @ViewBag._findADOCTORPartation.ContentEn
+
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card card2 justify-content-center wow animated fadeInUp " data-wow-delay="1.5s" style="visibility: visible; animation-delay:1.5s; animation-name:fadeInUp;">
+                                <div class="text-center ">
+                                    <div class="row justify-content-center">
+                                        <img class="cir1 img-responsive" src="~/Content/img/cir2.png">
+                                        <img class="d-block img-responsive" src="~/Content/img/pic2.png">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-text text-center text-uppercase">@Resources.GlobalStrings.Pay_and_send_your_questions_documents</h6>
+                                    <p>
+                                        @if (ApplicationContext.IsArabic)
+                                        {
+                                            @ViewBag._payANDSENDYOURQUESTIONSANDDOCUMENTSPartation.ContentAr
+
+                                        }
+                                        else
+                                        {
+                                            @ViewBag._payANDSENDYOURQUESTIONSANDDOCUMENTSPartation.ContentEn
+
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card card3 justify-content-center wow animated fadeInUp " data-wow-delay="2s" style="visibility: visible; animation-delay:2s; animation-name:fadeInUp;">
+                                <div class="text-center ">
+                                    <div class="row justify-content-center">
+                                        <img class="cir1 img-responsive" src="~/Content/img/cir3.png">
+                                        <img class="d-block img-responsive" src="~/Content/img/pic3.png">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-text text-center text-uppercase">
+                                        @Resources.GlobalStrings.get_your<br>
+                                        @Resources.GlobalStrings.second_opinion_report
+                                    </h6>
+                                    <p>
+
+
+                                        @if (ApplicationContext.IsArabic)
+                                        {
+                                            @ViewBag._getYOURSECONDOPINIONREPORTPartation.ContentAr
+
+                                        }
+                                        else
+                                        {
+                                            @ViewBag._getYOURSECONDOPINIONREPORTPartation.ContentEn
+
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="doctors-img-section how-it-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="~/Content/img/doctors-bg.png" class="img-responsive doctors-img" alt="doctors">
+                </div>
+            </div>
+        </div>
+    </section>
+    @Html.Partial("~/Views/Shared/_Partial/_Testimonial.cshtml")
+    <!-- social Links -->
+    @Html.Partial("~/Views/Shared/_Partial/_SocialUrl.cshtml")
+</div>
+<!-- #content -->
+
+@section Scripts{
+    <script src="~/Content/js/@Resources.GlobalStrings.doctor_profile_js"></script>
+
+
+}

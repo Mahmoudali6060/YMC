@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Origin.YMC.Business.Entities</RootNamespace>
+    <AssemblyName>Origin.YMC.Business.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataAnnotationsExtensions, Version=5.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataAnnotationsExtensions.5.0.1.27\lib\NETFramework40\DataAnnotationsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="AppRoles.cs" />
+    <Compile Include="DbInitializer.cs" />
+    <Compile Include="Domain\ApplicationUser.cs" />
+    <Compile Include="Domain\Attachment.cs" />
+    <Compile Include="Domain\AttachmentType.cs" />
+    <Compile Include="Domain\Cities\City.cs" />
+    <Compile Include="Domain\Cities\ViewModels\CityViewModel.cs" />
+    <Compile Include="Domain\Countries\Country.cs" />
+    <Compile Include="Domain\Doctors\Doctor.cs" />
+    <Compile Include="Domain\Doctors\ViewModels\DoctorViewModels.cs" />
+    <Compile Include="Domain\GenderEnum.cs" />
+    <Compile Include="Domain\Interpreter\Enums\InterpretationTypes.cs" />
+    <Compile Include="Domain\Interpreter\InterpretationFees.cs" />
+    <Compile Include="Domain\Interpreter\Interpreter.cs" />
+    <Compile Include="Domain\Interpreter\ViewModels\ListInterpreterViewModel.cs" />
+    <Compile Include="Domain\Logs\Enums\LogType.cs" />
+    <Compile Include="Domain\Logs\Log.cs" />
+    <Compile Include="Domain\Logs\ViewModels\LogViewModel.cs" />
+    <Compile Include="Domain\Partation\Partation.cs" />
+    <Compile Include="Domain\Partation\PartationType.cs" />
+    <Compile Include="Domain\Partation\ViewModels\PartationTypeViewModel.cs" />
+    <Compile Include="Domain\Partation\ViewModels\PartationViewModel.cs" />
+    <Compile Include="Domain\Patients\Case.cs" />
+    <Compile Include="Domain\Patients\CasePatientQuestionsAnswers.cs" />
+    <Compile Include="Domain\Patients\Enums\EthnicOriginEnum.cs" />
+    <Compile Include="Domain\Patients\Enums\PhoneTypeEnum.cs" />
+    <Compile Include="Domain\Patients\Enums\SaluationEnum.cs" />
+    <Compile Include="Domain\Patients\Enums\StatusEnum.cs" />
+    <Compile Include="Domain\Patients\Patient.cs" />
+    <Compile Include="Domain\Patients\PatientCallRequests.cs" />
+    <Compile Include="Domain\Patients\PatientCallRequestsViewModel.cs" />
+    <Compile Include="Domain\Patients\PatientPhysician.cs" />
+    <Compile Include="Domain\Patients\ViewModel\CaseDetailsViewModel.cs" />
+    <Compile Include="Domain\Patients\ViewModel\CaseListingViewModel.cs" />
+    <Compile Include="Domain\Patients\ViewModel\CasePatientInfoViewModel.cs" />
+    <Compile Include="Domain\Patients\ViewModel\CasePatientQuestionsViewModel.cs" />
+    <Compile Include="Domain\Patients\ViewModel\CaseSubmitViewModel.cs" />
+    <Compile Include="Domain\Patients\ViewModel\CaseViewModel.cs" />
+    <Compile Include="Domain\Patients\ViewModel\PatientViewModels.cs" />
+    <Compile Include="Domain\Payments\Payment.cs" />
+    <Compile Include="Domain\Payments\ViewModels\PaymentViewModel.cs" />
+    <Compile Include="Domain\QuestionsThreads\QuestionThread.cs" />
+    <Compile Include="Domain\QuestionsThreads\ViewModels\QuestionThreadViewModel.cs" />
+    <Compile Include="Domain\QuestionsThreads\ViewModels\QuestionViewModel.cs" />
+    <Compile Include="Domain\SocialUrl\Enums\SocialType.cs" />
+    <Compile Include="Domain\SocialUrl\Social.cs" />
+    <Compile Include="Domain\SocialUrl\ViewModels\SocialViewModels.cs" />
+    <Compile Include="Domain\Specialties\Specialty.cs" />
+    <Compile Include="Domain\Specialties\ViewModels\SpecialtyViewModels.cs" />
+    <Compile Include="Domain\Statistics\ViewModels\FactsViewModels.cs" />
+    <Compile Include="Domain\Testimonials\Testimonial.cs" />
+    <Compile Include="Domain\Testimonials\ViewModels\TestimonialViewModel.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="Lockup\ViewModels\LockupViewModel.cs" />
+    <Compile Include="Migrations\201909092314076_inti.cs" />
+    <Compile Include="Migrations\201909092314076_inti.Designer.cs">
+      <DependentUpon>201909092314076_inti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909111959080_updateUser.cs" />
+    <Compile Include="Migrations\201909111959080_updateUser.Designer.cs">
+      <DependentUpon>201909111959080_updateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909112039155_AddMobileNumber.cs" />
+    <Compile Include="Migrations\201909112039155_AddMobileNumber.Designer.cs">
+      <DependentUpon>201909112039155_AddMobileNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909131627210_entityMissing.cs" />
+    <Compile Include="Migrations\201909131627210_entityMissing.Designer.cs">
+      <DependentUpon>201909131627210_entityMissing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909132126170_UpdateEntity.cs" />
+    <Compile Include="Migrations\201909132126170_UpdateEntity.Designer.cs">
+      <DependentUpon>201909132126170_UpdateEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909132248578_Patient.cs" />
+    <Compile Include="Migrations\201909132248578_Patient.Designer.cs">
+      <DependentUpon>201909132248578_Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909141345463_addDOctorEntity.cs" />
+    <Compile Include="Migrations\201909141345463_addDOctorEntity.Designer.cs">
+      <DependentUpon>201909141345463_addDOctorEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909141624449_updateDoctor.cs" />
+    <Compile Include="Migrations\201909141624449_updateDoctor.Designer.cs">
+      <DependentUpon>201909141624449_updateDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910041346211_partaion.cs" />
+    <Compile Include="Migrations\201910041346211_partaion.Designer.cs">
+      <DependentUpon>201910041346211_partaion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910041809400_TestimonialModel.cs" />
+    <Compile Include="Migrations\201910041809400_TestimonialModel.Designer.cs">
+      <DependentUpon>201910041809400_TestimonialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910041848595__specialtyUpdateModel.cs" />
+    <Compile Include="Migrations\201910041848595__specialtyUpdateModel.Designer.cs">
+      <DependentUpon>201910041848595__specialtyUpdateModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910042021441__doctorUpdateModel.cs" />
+    <Compile Include="Migrations\201910042021441__doctorUpdateModel.Designer.cs">
+      <DependentUpon>201910042021441__doctorUpdateModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910112204162_editDoctor.cs" />
+    <Compile Include="Migrations\201910112204162_editDoctor.Designer.cs">
+      <DependentUpon>201910112204162_editDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910121815428_patientcaseregisteration.cs" />
+    <Compile Include="Migrations\201910121815428_patientcaseregisteration.Designer.cs">
+      <DependentUpon>201910121815428_patientcaseregisteration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910122201596_addfeestodoctor.cs" />
+    <Compile Include="Migrations\201910122201596_addfeestodoctor.Designer.cs">
+      <DependentUpon>201910122201596_addfeestodoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910181808286_updatedquestions.cs" />
+    <Compile Include="Migrations\201910181808286_updatedquestions.Designer.cs">
+      <DependentUpon>201910181808286_updatedquestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910182236584_ResponeTimeDoctor.cs" />
+    <Compile Include="Migrations\201910182236584_ResponeTimeDoctor.Designer.cs">
+      <DependentUpon>201910182236584_ResponeTimeDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910182324064_FocusOfScientificDoctor.cs" />
+    <Compile Include="Migrations\201910182345098_FocusOfScientificDoctor1.cs" />
+    <Compile Include="Migrations\201910182345098_FocusOfScientificDoctor1.Designer.cs">
+      <DependentUpon>201910182345098_FocusOfScientificDoctor1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910190230538_addcasepatientid.cs" />
+    <Compile Include="Migrations\201910190230538_addcasepatientid.Designer.cs">
+      <DependentUpon>201910190230538_addcasepatientid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910211343335_modifypatientphysicians.cs" />
+    <Compile Include="Migrations\201910211343335_modifypatientphysicians.Designer.cs">
+      <DependentUpon>201910211343335_modifypatientphysicians.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910262003558_addforeignkeyforpatient.cs" />
+    <Compile Include="Migrations\201910262003558_addforeignkeyforpatient.Designer.cs">
+      <DependentUpon>201910262003558_addforeignkeyforpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910262008501_addforeignkeyforDoctor.cs" />
+    <Compile Include="Migrations\201910262008501_addforeignkeyforDoctor.Designer.cs">
+      <DependentUpon>201910262008501_addforeignkeyforDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910282114087_OpinionID.cs" />
+    <Compile Include="Migrations\201910282114087_OpinionID.Designer.cs">
+      <DependentUpon>201910282114087_OpinionID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910291905265_addDoctorResportCase.cs" />
+    <Compile Include="Migrations\201910291905265_addDoctorResportCase.Designer.cs">
+      <DependentUpon>201910291905265_addDoctorResportCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911131956144_countryArabicName.cs" />
+    <Compile Include="Migrations\201911131956144_countryArabicName.Designer.cs">
+      <DependentUpon>201911131956144_countryArabicName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911132000233_cityArabicName.cs" />
+    <Compile Include="Migrations\201911132000233_cityArabicName.Designer.cs">
+      <DependentUpon>201911132000233_cityArabicName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911192205365_questionThread.cs" />
+    <Compile Include="Migrations\201911192205365_questionThread.Designer.cs">
+      <DependentUpon>201911192205365_questionThread.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911231145345_interpreterentity.cs" />
+    <Compile Include="Migrations\201911231145345_interpreterentity.Designer.cs">
+      <DependentUpon>201911231145345_interpreterentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911280035109_addneedinterpreterstatus.cs" />
+    <Compile Include="Migrations\201911280035109_addneedinterpreterstatus.Designer.cs">
+      <DependentUpon>201911280035109_addneedinterpreterstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911281325348_interpreterss.cs" />
+    <Compile Include="Migrations\201911281325348_interpreterss.Designer.cs">
+      <DependentUpon>201911281325348_interpreterss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911282200432_interpreter1.cs" />
+    <Compile Include="Migrations\201911282200432_interpreter1.Designer.cs">
+      <DependentUpon>201911282200432_interpreter1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911301519197_CasePatientQuestionsAnswers-interpreter.cs" />
+    <Compile Include="Migrations\201911301519197_CasePatientQuestionsAnswers-interpreter.Designer.cs">
+      <DependentUpon>201911301519197_CasePatientQuestionsAnswers-interpreter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912082050034_medicalreportdiagnostic.cs" />
+    <Compile Include="Migrations\201912082050034_medicalreportdiagnostic.Designer.cs">
+      <DependentUpon>201912082050034_medicalreportdiagnostic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912201045342_remove-speciality-interpreter.cs" />
+    <Compile Include="Migrations\201912201045342_remove-speciality-interpreter.Designer.cs">
+      <DependentUpon>201912201045342_remove-speciality-interpreter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912202207011_patientcallrequests.cs" />
+    <Compile Include="Migrations\201912202207011_patientcallrequests.Designer.cs">
+      <DependentUpon>201912202207011_patientcallrequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912212020187_update-patient-call.cs" />
+    <Compile Include="Migrations\201912212020187_update-patient-call.Designer.cs">
+      <DependentUpon>201912212020187_update-patient-call.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009162156128_OnlineProfileDoctor.cs" />
+    <Compile Include="Migrations\202009162156128_OnlineProfileDoctor.Designer.cs">
+      <DependentUpon>202009162156128_OnlineProfileDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009191920531_RemoveShippingAddress.cs" />
+    <Compile Include="Migrations\202009191920531_RemoveShippingAddress.Designer.cs">
+      <DependentUpon>202009191920531_RemoveShippingAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010022230081_addclosuredate.cs" />
+    <Compile Include="Migrations\202010022230081_addclosuredate.Designer.cs">
+      <DependentUpon>202010022230081_addclosuredate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="OriginYMCPermissions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201909092314076_inti.resx">
+      <DependentUpon>201909092314076_inti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909111959080_updateUser.resx">
+      <DependentUpon>201909111959080_updateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909112039155_AddMobileNumber.resx">
+      <DependentUpon>201909112039155_AddMobileNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909131627210_entityMissing.resx">
+      <DependentUpon>201909131627210_entityMissing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909132126170_UpdateEntity.resx">
+      <DependentUpon>201909132126170_UpdateEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909132248578_Patient.resx">
+      <DependentUpon>201909132248578_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909141345463_addDOctorEntity.resx">
+      <DependentUpon>201909141345463_addDOctorEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909141624449_updateDoctor.resx">
+      <DependentUpon>201909141624449_updateDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041346211_partaion.resx">
+      <DependentUpon>201910041346211_partaion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041809400_TestimonialModel.resx">
+      <DependentUpon>201910041809400_TestimonialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041848595__specialtyUpdateModel.resx">
+      <DependentUpon>201910041848595__specialtyUpdateModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910042021441__doctorUpdateModel.resx">
+      <DependentUpon>201910042021441__doctorUpdateModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910112204162_editDoctor.resx">
+      <DependentUpon>201910112204162_editDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910121815428_patientcaseregisteration.resx">
+      <DependentUpon>201910121815428_patientcaseregisteration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910122201596_addfeestodoctor.resx">
+      <DependentUpon>201910122201596_addfeestodoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910181808286_updatedquestions.resx">
+      <DependentUpon>201910181808286_updatedquestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910182236584_ResponeTimeDoctor.resx">
+      <DependentUpon>201910182236584_ResponeTimeDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910182345098_FocusOfScientificDoctor1.resx">
+      <DependentUpon>201910182345098_FocusOfScientificDoctor1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910190230538_addcasepatientid.resx">
+      <DependentUpon>201910190230538_addcasepatientid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910211343335_modifypatientphysicians.resx">
+      <DependentUpon>201910211343335_modifypatientphysicians.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910262003558_addforeignkeyforpatient.resx">
+      <DependentUpon>201910262003558_addforeignkeyforpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910262008501_addforeignkeyforDoctor.resx">
+      <DependentUpon>201910262008501_addforeignkeyforDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910282114087_OpinionID.resx">
+      <DependentUpon>201910282114087_OpinionID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910291905265_addDoctorResportCase.resx">
+      <DependentUpon>201910291905265_addDoctorResportCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911131956144_countryArabicName.resx">
+      <DependentUpon>201911131956144_countryArabicName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911132000233_cityArabicName.resx">
+      <DependentUpon>201911132000233_cityArabicName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911192205365_questionThread.resx">
+      <DependentUpon>201911192205365_questionThread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911231145345_interpreterentity.resx">
+      <DependentUpon>201911231145345_interpreterentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911280035109_addneedinterpreterstatus.resx">
+      <DependentUpon>201911280035109_addneedinterpreterstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911281325348_interpreterss.resx">
+      <DependentUpon>201911281325348_interpreterss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911282200432_interpreter1.resx">
+      <DependentUpon>201911282200432_interpreter1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911301519197_CasePatientQuestionsAnswers-interpreter.resx">
+      <DependentUpon>201911301519197_CasePatientQuestionsAnswers-interpreter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912082050034_medicalreportdiagnostic.resx">
+      <DependentUpon>201912082050034_medicalreportdiagnostic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912201045342_remove-speciality-interpreter.resx">
+      <DependentUpon>201912201045342_remove-speciality-interpreter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912202207011_patientcallrequests.resx">
+      <DependentUpon>201912202207011_patientcallrequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912212020187_update-patient-call.resx">
+      <DependentUpon>201912212020187_update-patient-call.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009162156128_OnlineProfileDoctor.resx">
+      <DependentUpon>202009162156128_OnlineProfileDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009191920531_RemoveShippingAddress.resx">
+      <DependentUpon>202009191920531_RemoveShippingAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010022230081_addclosuredate.resx">
+      <DependentUpon>202010022230081_addclosuredate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,204 @@
+﻿@using Microsoft.AspNet.Identity
+@using Origin.YMC.Business.Entities.Domain.Doctors.ViewModel
+@using Origin.YMC.Business.Entities.Domain.SocialUrl.Enums
+@using Origin.YMC.Web.Client.Helper
+@using Origin.YMC.Business.Entities.Domain.SocialUrl.Enums
+@using Origin.YMC.Business.Entities.Domain.Specialties.ViewModels
+@{
+    ViewBag.Title = "Doctors";
+    Layout = "~/Views/Shared/_Layout_blank.cshtml";
+    var AdminSiteUrl = System.Configuration.ConfigurationManager.AppSettings["AdminPath"];
+    var specialties = (List<SpecialtyViewModels>)ViewBag._specialties;
+    ViewBag.PageActiveNumber = 4;
+}
+<style>
+    .aProfileLink {
+        color: #337ab7;
+        font-size: smaller;
+        padding: 10px;
+        text-decoration: underline !important;
+    }
+</style>
+<section class="header-list-cover header-about-us-cover">
+    <div class="container">
+        <!-- .row -->
+        <div class="row">
+            <div class="col-md-12 static-position">
+                <div class="list-text-wrapper">
+                    <h1 class="header-list-main-title text-uppercase fadeInLeft wow" data-wow-delay="0.5s">@Resources.GlobalStrings.Doctors</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*<header>
+    <section class="bottom_header">
+        <div class="container">
+            <!-- .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="sponsors text-center scroll-animations specialties">
+                        <ul class="wow fadeInUp" data-wow-delay="0.5s">
+                            @foreach (var specialty in specialties)
+                            {
+                                <li class="text-center">
+                                    <a href="/Doctor/Doctors?specialtyId=@specialty.Id">
+                                        <img src="@AdminSiteUrl/@specialty.ImageUrl" class="img-responsive" alt="">
+                                        @if (ApplicationContext.IsArabic)
+                                        {
+                                            <figcaption class="speccaption"> @specialty.TitleAr</figcaption>
+                                        }
+                                        else
+                                        {
+                                            <figcaption class="speccaption"> @specialty.TitleEn</figcaption>
+                                        }
+                                    </a>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </header>
+*@
+<!-- #header close -->
+<!-- #content start -->
+<div id="content" class="content">
+    <section class="doctors-list-section">
+        <div class="container">
+            <h1 class="section-title fadeInLeft wow text-center mb-30" data-wow-delay="0.5s">
+                <span class="blue-font-light sep-before">
+                    @Resources.GlobalStrings.Specialists
+                </span>
+            </h1>
+            <div class="fadeInLeft wow text-center mb-30" data-wow-delay="0.5s">
+                <span class="select-specialty-label">@Resources.GlobalStrings.Please_Select_Specialty : </span>
+                <select class="browser-default custom-select" id="ddlSpecialty">
+                    <option selected>@Resources.GlobalStrings.Specialties</option>
+                    @foreach (var Specialty in specialties)
+                    {
+                        if (ApplicationContext.IsArabic)
+                        {
+                            <option value="@Specialty.Id">@Specialty.TitleAr</option>
+                        }
+                        else
+                        {
+                            <option value="@Specialty.Id">@Specialty.TitleEn</option>
+                        }
+
+                    }
+                </select>
+            </div>
+            <!-- .row -->
+            <div class="row" id="div_Doctors_info">
+                @{var doctors = (List<DoctorViewModels>)ViewBag._doctors;}
+                @if (doctors.Count > 0)
+                {
+                    foreach (var doctor in doctors)
+                    {
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" onclick="getDoctorDetails('@doctor.Id');" style="cursor:pointer">
+                            <div class="item-content doctors-item wow slideInUp" data-wow-delay="0.5s">
+                                <img src="@(doctor.ProfileImage !=null ? doctor.ProfileImage : "/content/img/avatar-default.jpg")" class="img-responsive avatar-default">
+                                <h5 class="red-group-title text-uppercase">@Resources.GlobalStrings.Dr.@doctor.FirstName @doctor.LastName</h5>
+                                <h6 class="features-title text-uppercase"> @doctor.SpecialtyName</h6>
+                                @*@if (!string.IsNullOrWhiteSpace(doctor.OnlineProfileLink))
+                                {
+                                    <a class="aProfileLink" href="//@doctor.OnlineProfileLink" target="_blank">@Resources.GlobalStrings.OnlineProfileLink</a>
+                                }*@
+                                <div class="stars">
+                                    <i class="fa fa-star marked"></i><i class="fa fa-star marked"></i><i class="fa fa-star marked"></i><i class="fa fa-star marked"></i><i class="fa fa-star unmarked"></i>
+                                </div>
+                                <button onclick="getDoctorDetails('@doctor.Id');" type="button" class="btn btn-join no-margin-top"><span class="text-uppercase fees-label">@Resources.GlobalStrings.Fees_Label:</span>@((int)doctor.fees)</button>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <h3 class="section-title fadeInLeft wow text-center mb-30" data-wow-delay="0.5s">
+                        <span class="blue-font-light" style="font-size: 40px;color: #333333 !important;">@Resources.GlobalStrings.NoDoctorsFound</span>
+                    </h3>
+                }
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    @*<a class="Load-more text-uppercase shake wow" href="#">Load More</a>*@
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- social Links -->
+    @Html.Partial("~/Views/Shared/_Partial/_SocialUrl.cshtml")
+</div>
+
+@section Scripts{
+    <script>
+        function getDoctorDetails(doctorId) {
+            window.location = "/Doctor/DoctorProfileInfo?doctorId=" + doctorId;
+        }
+
+        function appendDoctorInfo(doctor) {
+            var text = "";
+            if (doctor.OnlineProfileLink)
+            {
+                text = '<a class="aProfileLink" href="//'+doctor.OnlineProfileLink+'" target="_blank">@Resources.GlobalStrings.OnlineProfileLink</a>';
+            }
+            return ` <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                            <div class="item-content doctors-item wow slideInUp" data-wow-delay="0.5s">
+                                                <img src="`+ doctor.ProfileImage + `" class="img-responsive">
+                                                <h5 class="red-group-title text-uppercase">Dr.`+ doctor.FirstName + ` ` + doctor.LastName + `</h5>
+                                                <h6 class="features-title text-uppercase"> `+ doctor.SpecialtyName + `</h6>
+                                                <div class="stars">
+                                                    <i class="fa fa-star marked"></i><i class="fa fa-star marked"></i><i class="fa fa-star marked"></i><i class="fa fa-star marked"></i><i class="fa fa-star unmarked"></i>
+                                                </div>
+                                                <button onclick="getDoctorDetails('`+ doctor.Id + `');" type="button" class="btn btn-join no-margin-top">` + doctor.fees + `</button>
+                                            </div>
+                                        </div>`;
+        }
+
+        $(function () {
+
+            $('#ddlSpecialty').on('change', function () {
+                var spId = this.value
+                getDoctors(''+spId+'');
+            });
+
+
+            @if (ViewBag._selectedSpecialtyId != null) {
+               @:getDoctors('@ViewBag._selectedSpecialtyId');
+               @:$('#ddlSpecialty').val('@ViewBag._selectedSpecialtyId');
+            }
+        });
+
+        function getDoctors(spId) {
+             $("#loader").show();
+                $.ajax({
+                    type: "POST",
+                    url: "/Doctor/GetDoctors",
+                    data: { specialtyId: spId },
+                    datatype: "json",
+                    traditional: true,
+                    success: function (data) {
+                        $("#div_Doctors_info").html("");
+                        if (data.length > 0) {
+                            $.each(data, function (index, ele) {
+
+                                $("#div_Doctors_info").append(appendDoctorInfo(ele));
+                            });
+                        } else {
+                              $("#div_Doctors_info").append('<h3 class="section-title fadeInLeft wow text-center mb-30" data-wow-delay="0.5s"> <span class="blue-font-light " style="font-size: 40px;color: #333333 !important;">@Resources.GlobalStrings.NoDoctorsFound</span></h3>');
+                        }
+                        $("#loader").hide();
+                    },
+                    onFailure: function (ex) {
+                        alert(ex);
+                        $("#loader").hide();
+                    }
+                });
+        }
+    </script>
+
+}

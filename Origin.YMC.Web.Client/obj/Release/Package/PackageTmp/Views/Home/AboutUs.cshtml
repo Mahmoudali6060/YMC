@@ -1,0 +1,109 @@
+﻿@using Origin.YMC.Business.Entities.Domain.Partation.ViewModels;
+@using Origin.YMC.Business.Entities.Domain.Partation;
+@{
+    Layout = "~/Views/Shared/_Layout_blank.cshtml";
+    ViewBag.PageActiveNumber = 5;
+}
+
+<section class="header-list-cover header-about-us-cover">
+    <div class="container">
+        <!-- .row -->
+        <div class="row">
+            <div class="col-md-12 static-position">
+                <div class="list-text-wrapper">
+                    <h1 class="header-list-main-title text-uppercase fadeInLeft wow" data-wow-delay="0.5s">@Resources.GlobalStrings.AboutUs</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</header>
+<!-- #header close -->
+<!-- #content start -->
+<div id="content" class="content">
+    <section class="why-bg about-us-bg">
+        <div class="container">
+            <!-- .row -->
+            <div class="row">
+                <div class="col-md-8 col-xs-12">
+                    <div class="about-us-intro">
+                        <h2 class="white-font-regular text-left wow fadeInDown" data-wow-delay="0.5s">@Resources.GlobalStrings.OurStory   </h2>
+                        <p class="para-style-white wow fadeInUp" data-wow-delay="1s">
+                            @{
+                                var aboutContent = ApplicationContext.IsArabic ? (ViewBag._aboutUsPartation as PartationViewModel).ContentAr : (ViewBag._aboutUsPartation as PartationViewModel).ContentEn;
+                            }
+                            @aboutContent
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="organizers-section text-center">
+        <h1 class="section-title fadeInLeft wow mb-30">
+            <span class="blue-font-light sep-before">
+                @Resources.GlobalStrings.Organizers
+            </span>
+        </h1>
+        <div class="container">
+            <!-- .row -->
+            <div class="row">
+                <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="organizers-container-box wow zoomIn" data-wow-delay="0.5s">
+                        <img src="/content/img/organizers/organizer-1.jpg" class="img-responsive organizer-img" alt="">
+                        <div class="organizer-name white-font-regular">
+                            Dr. Friedrich Paulsen
+                        </div>
+                        <div class="organizer-title white-font-regular">
+                            Dental Surgeon
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="organizers-container-box wow zoomIn" data-wow-delay="1s">
+                        <img src="/content/img/organizers/organizer-2.jpg" class="img-responsive organizer-img" alt="">
+                        <div class="organizer-name white-font-regular">
+                            Dr. Friedrich Paulsen
+                        </div>
+                        <div class="organizer-title white-font-regular">
+                            Dental Surgeon
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="organizers-container-box wow zoomIn" data-wow-delay="1.5s">
+                        <img src="/content/img/organizers/organizer-3.jpg" class="img-responsive organizer-img" alt="">
+                        <div class="organizer-name white-font-regular">
+                            Dr. Friedrich Paulsen
+                        </div>
+                        <div class="organizer-title white-font-regular">
+                            Dental Surgeon
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="organizers-container-box wow zoomIn" data-wow-delay="2s">
+                        <img src="/content/img/organizers/organizer-4.jpg" class="img-responsive organizer-img" alt="">
+                        <div class="organizer-name white-font-regular">
+                            Dr. Friedrich Paulsen
+                        </div>
+                        <div class="organizer-title white-font-regular">
+                            Dental Surgeon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @Html.Partial("~/Views/Shared/_Partial/_Testimonial.cshtml")
+    <!-- social Links -->
+    @Html.Partial("~/Views/Shared/_Partial/_SocialUrl.cshtml")
+</div>
+<!-- #content -->
+
+@section Scripts{
+    <script src="~/Content/js/@Resources.GlobalStrings.doctor_profile_js"></script>
+
+
+}

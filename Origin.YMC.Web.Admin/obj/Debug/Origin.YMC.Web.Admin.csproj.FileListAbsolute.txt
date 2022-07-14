@@ -1,0 +1,260 @@
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.csprojAssemblyReference.cache
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.csproj.CoreCompileInputs.cache
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Web.Admin.dll.config
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Web.Admin.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Web.Admin.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\csc.exe
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\csc.exe.config
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\csc.rsp
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\csi.exe
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\csi.exe.config
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\csi.rsp
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.Managed.Core.targets
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.AppContext.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Collections.Immutable.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Console.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.Compression.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.FileSystem.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.Pipes.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Reflection.Metadata.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.AccessControl.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Claims.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Principal.Windows.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.ValueTuple.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Xml.XmlDocument.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Xml.XPath.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\vbc.exe
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\vbc.exe.config
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\vbc.rsp
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\VBCSCompiler.exe
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\roslyn\VBCSCompiler.exe.config
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Antlr3.Runtime.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Autofac.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Autofac.Integration.Mvc.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\EntityFramework.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\EntityFramework.SqlServer.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.Core.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Cookies.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Facebook.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Google.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.OAuth.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Twitter.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Web.Infrastructure.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Newtonsoft.Json.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Components.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Entities.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Core.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.CrossCutting.Framework.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Repositories.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Owin.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\PagedList.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\PagedList.Mvc.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.Helpers.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.Mvc.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.Optimization.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.Razor.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.Deployment.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.Razor.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\WebGrease.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Components.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Components.dll.config
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Entities.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Entities.dll.config
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Core.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.CrossCutting.Framework.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Repositories.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Repositories.dll.config
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Autofac.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Autofac.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Autofac.Integration.Mvc.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\PagedList.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\PagedList.Mvc.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.Helpers.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.Mvc.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.Razor.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.Deployment.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.Razor.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\System.Web.Optimization.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Newtonsoft.Json.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Antlr3.Runtime.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\EntityFramework.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\EntityFramework.SqlServer.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.Core.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Facebook.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Cookies.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Google.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Twitter.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.OAuth.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.csproj.CopyComplete
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\DataTables.AspNet.Core.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\DataTables.AspNet.Mvc5.dll
+C:\YMC\Origin.YMC\Origin.YMC.Web.Admin\bin\DataAnnotationsExtensions.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Web.Admin.dll.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Web.Admin.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Web.Admin.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\csc.exe
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\csc.exe.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\csc.rsp
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\csi.exe
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\csi.exe.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\csi.rsp
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.Managed.Core.targets
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.AppContext.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Collections.Immutable.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Console.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.Compression.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.FileSystem.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.IO.Pipes.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Reflection.Metadata.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.AccessControl.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Claims.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Security.Principal.Windows.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.ValueTuple.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Xml.XPath.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\vbc.exe
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\vbc.exe.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\vbc.rsp
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\VBCSCompiler.exe
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\roslyn\VBCSCompiler.exe.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Antlr3.Runtime.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Autofac.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Autofac.Integration.Mvc.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\DataTables.AspNet.Core.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\DataTables.AspNet.Mvc5.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\EntityFramework.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\EntityFramework.SqlServer.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Google.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Web.Infrastructure.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Newtonsoft.Json.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Components.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Entities.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Core.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.CrossCutting.Framework.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Repositories.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Owin.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\PagedList.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\PagedList.Mvc.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.Helpers.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.Mvc.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.Optimization.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.Razor.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.Deployment.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.Razor.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\WebGrease.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\DataAnnotationsExtensions.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Components.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Components.dll.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Entities.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Business.Entities.dll.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Core.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.CrossCutting.Framework.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Repositories.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Origin.YMC.Repositories.dll.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Autofac.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Autofac.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Autofac.Integration.Mvc.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\EntityFramework.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\EntityFramework.SqlServer.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\PagedList.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\PagedList.Mvc.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.Helpers.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.Mvc.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.Razor.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.Deployment.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.WebPages.Razor.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\System.Web.Optimization.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Newtonsoft.Json.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Antlr3.Runtime.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Google.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.csproj.AssemblyReference.cache
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.csproj.CoreCompileInputs.cache
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.csproj.CopyComplete
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Web.Admin\obj\Debug\Origin.YMC.Web.Admin.pdb

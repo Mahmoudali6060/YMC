@@ -1,0 +1,1028 @@
+﻿@using Origin.YMC.Web.Client.Models
+@using Microsoft.AspNet.Identity
+@using Origin.YMC.Web.Client.Helper
+@using Origin.YMC.Business.Entities.Domain.SocialUrl.Enums
+@using Origin.YMC.Business.Entities.Domain.Specialties.ViewModels
+
+@model RegisterViewModel
+@{
+    /**/
+
+    var ajax_Option = new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnSuccess = "success",
+        OnFailure = "onFailure",
+        OnBegin = "onBegin",
+        OnComplete = "onComplete"
+    };
+
+    var AdminSiteUrl = System.Configuration.ConfigurationManager.AppSettings["AdminPath"];
+    var specialties = (List<SpecialtyViewModels>)ViewBag._specialties;
+
+}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YMC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/favicons/favicon-16x16.png">
+    @*<link rel="manifest" href="~/Content/img/favicons/site.webmanifest">*@
+    <link rel="mask-icon" href="~/Content/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/css/@Resources.GlobalStrings.animate_css">
+    <link rel="stylesheet" href="~/Content/css/font-awesome.css">
+    <link rel="stylesheet" href="~/Content/css/@Resources.GlobalStrings.bootstrap_min_css">
+    <link rel="stylesheet" href="~/Content/css/jquery-steps.css">
+    <link rel="stylesheet" href="~/Content/css/@Resources.GlobalStrings.slick_css">
+    <link rel="stylesheet" href="~/Content/css/@Resources.GlobalStrings.slick_theme_css">
+    <link rel="stylesheet" href="~/Content/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="~/Content/css/@Resources.GlobalStrings.smooth_scrollbar_css">
+    <link rel="stylesheet" href="~/Content/css/@Resources.GlobalStrings.main_css">
+    <script src="~/Content/js/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+    <link rel="stylesheet" href="~/Content/toastr/toastr.min.css" />
+    <link href="~/Content/css/basic.min.css" rel="stylesheet" />
+    <link href="~/Content/css/dropzone.min.css" rel="stylesheet" />
+    <style>
+        div.bootstrap-filestyle > input.form-control {
+            display: contents !important;
+        }
+
+        .dz-default.dz-message {
+            /*visibility:hidden;*/
+            margin-top: 100px;
+            margin-left: 39%;
+        }
+
+        .dropzone {
+            border: 1px solid rgba(0,0,0,0.3) !important;
+            background-image: url(/Content/img/upload-arrow.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(255,255,255,0.6);
+        }
+
+        .footer-links > .active > a:hover, .footer-links > .active > a {
+            background-image: url(../img/bo.png);
+            background-repeat: no-repeat;
+            background-position: center 38px;
+            color: #00b5fc !important;
+            background-color: transparent;
+            border-bottom: 2px solid #00b5fc;
+        }
+    </style>
+    <link href="~/Content/css/intlTelInput.css" rel="stylesheet" />
+</head>
+
+<body dir="@(ApplicationContext.IsArabic?"rtl":"ltr")">
+    <div id="loader">
+        <img src="~/Content/img/loader.gif" alt="loading...">
+    </div>
+    <a href="#" class="scrollup wow fadeInUp" style="display: block;"><i class="fa fa-angle-up"></i></a>
+    <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+    <!-- Add your site or application content here -->
+    <!-- header Start
+             ================================================= -->
+    <header id="header" class="header">
+        <section class="top_header" style="display:none;">
+            <div class="container">
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="white-font-black font-size-top-header">@Resources.GlobalStrings.GetDiscountRegister</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <span class="white-font-regular offer-label">@Resources.GlobalStrings.For7DaysOnly</span>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="offers-time">
+                            <li>
+                                <div class="top-num">
+                                    3
+                                </div>
+                                <div class="bottom-num">
+                                    @Resources.GlobalStrings.Days
+                                </div>
+                            </li>
+                            <li>
+                                <div class="top-num">
+                                    01
+                                </div>
+                                <div class="bottom-num">
+                                    @Resources.GlobalStrings.Offers
+                                </div>
+                            </li>
+                            <li>
+                                <div class="top-num">
+                                    22
+                                </div>
+                                <div class="bottom-num">
+                                    @Resources.GlobalStrings.Minutes
+                                </div>
+                            </li>
+                            <li>
+                                <div class="top-num">
+                                    36
+                                </div>
+                                <div class="bottom-num">
+                                    @Resources.GlobalStrings.Seconds
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="btn btn-get red-font-bold">@Resources.GlobalStrings.GetNow</a>
+                    </div>
+                </div>
+            </div>
+            <a class="offers-toggle" href="#"></a>
+        </section>
+        <section class="middle_header list-header">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="nav-logo left bounceIn wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                <a href="/Home/Index"><img src="~/Content/img/logo.png" class="img-responsive" alt="logo"></a>
+                            </div>
+                            <div class="lang right">
+                                @if (ApplicationContext.IsArabic)
+                                {
+                                    @Html.ActionLink("English", "Set", "Home", new { lang = "en" }, new { @class = "nav-link lang" })
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("عربي", "Set", "Home", new { lang = "Ar" }, new { @class = "nav-link lang" })
+                                }
+                            </div>
+                            <div class="actions right">
+                                <ul class="actions-list-reg scroll-animations">
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                                        {
+                                            <li class="">
+                                                <div class="dropdown user-has-signed-in">
+                                                    <button class="btn btn-default dropdown-toggle" type="button"
+                                                            id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="true">
+                                                        @if (User.IsInRole("Doctor"))
+                                                        {
+                                                            <img src="@User.Identity.GetDoctorImage()" class="p-1" alt="">
+                                                        }
+                                                        @User.Identity.GetUserName() <span class="caret"></span>
+                                                        <span class="notification" onclick="location.href='/patient/Notifications'">0</span>
+                                                    </button>
+
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                        @Html.AntiForgeryToken()
+                                                        <li><a href="javascript:document.getElementById('logoutForm').submit()">@Resources.GlobalStrings.SignOut</a></li>
+                                                        @if (User.IsInRole("Doctor"))
+                                                        {
+                                                            <li><a id="hrefDoctorLink" href="/Doctor/DoctorProfile">@Resources.GlobalStrings.My_ProfileInfo</a></li>
+                                                        }
+                                                        else if (User.IsInRole("Patient"))
+                                                        {
+                                                            <li><a id="hrefPatientLink" href="/Patient/LatestConsultations">@Resources.GlobalStrings.My_ProfileInfo</a></li>
+                                                        }
+                                                        else if (User.IsInRole("Interpreter"))
+                                                        {
+                                                            <li><a id="hrefInterpretertLink" href="/Interpreter/Index">@Resources.GlobalStrings.My_ProfileInfo</a></li>
+                                                        }
+                                                    </ul>
+
+                                                </div>
+                                            </li>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <!-- Trigger the modal with a button -->
+                                        <li class=""><a href="#" class="preventDef close-1" data-toggle="modal" data-dismiss="modal" data-target="#SignInDocModal"><img src="~/Content/img/doc-1.png" class="p-1" alt="">@Resources.GlobalStrings.SignInDoctor</a></li>
+                                        <li class=""><a href="#" class="preventDef close-2" data-toggle="modal" data-dismiss="modal" data-target="#SignInPatientModal"><img src="~/Content/img/person-1.png" class="p-1" alt="">@Resources.GlobalStrings.SignInPatient</a></li>
+                                    }
+                                </ul>
+                            </div>
+
+                            <!-- Sing In as doctor Modal -->
+                            <div id="SignInDocModal" class="modal sign-in fade" role="dialog" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <img src="~/Content/img/sign-in-bg.png" class="img-responsive sign-in-bg" alt="">
+                                            <div class="wrap-login100 p-t-190 p-b-30">
+                                                <h4 class="sing-in-title blue-font-black">@Resources.GlobalStrings.SIGNIN</h4>
+                                                <p class="sub-title-sign">
+                                                    @Resources.GlobalStrings.SignIn_header
+                                                </p>
+                                                @using (Ajax.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl, SignInDoctorModel = true }, ajax_Option, new { @class = "login100-form validate-form", role = "form" }))
+                                                {
+
+                                                    @Html.AntiForgeryToken()
+                                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                    <div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
+                                                        @Html.TextBoxFor(c => c.Email, new { @class = "input100", placeholder = Resources.GlobalStrings.Email })
+                                                        @Html.ValidationMessageFor(c => c.Email, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10" data-validate="Password is required">
+                                                        @Html.TextBoxFor(c => c.Password, new { @class = "input100", placeholder = Resources.GlobalStrings.Password, @type = "password" })
+                                                        @Html.ValidationMessageFor(c => c.Password, "", new { @class = "text-danger", @style = "color:red" })
+                                                        <span class="focus-input100"></span>
+                                                        <span class="symbol-input100">
+                                                            <i class="fa fa-lock"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="container-login100-form-btn p-t-10">
+                                                        <button class="login100-form-btn">
+                                                            @Resources.GlobalStrings.Login
+                                                        </button>
+                                                    </div>
+                                                    <div class="form-link-container clear">
+                                                        <div class="contact100-form-checkbox left">
+                                                            <input class="input-checkbox100" id="ckb2" type="checkbox" name="remember-me">
+                                                            <label class="label-checkbox100" for="ckb2">
+                                                                @Resources.GlobalStrings.RememberMe
+                                                            </label>
+                                                        </div>
+                                                        <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#ForgotPasswordModal" class="right forget-pass preventDef close-4">@Resources.GlobalStrings.ForgotPassword</a>
+                                                    </div>
+                                                    <div class="clear text-center create-account-container">
+                                                        <a data-toggle="modal" data-dismiss="modal" data-target="#SignUpModal" href="#" class="preventDef close-3 create-account btn-create-doctor-account">@Resources.GlobalStrings.CreateAccountNow</a>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sing In as Patient Modal -->
+                            <div id="SignInPatientModal" class="modal sign-in fade" role="dialog" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <img src="~/Content/img/sign-in-patient-bg.png" class="img-responsive sign-in-bg" alt="">
+                                            <div class="wrap-login100 p-t-190 p-b-30">
+                                                <h4 class="sing-in-title blue-font-black">@Resources.GlobalStrings.SIGNIN</h4>
+                                                <p class="sub-title-sign">
+                                                    @Resources.GlobalStrings.SignIn_header
+                                                </p>
+                                                @using (Ajax.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl, SignInDoctorModel = false }, ajax_Option, new { @class = "login100-form validate-form", role = "form" }))
+                                                {
+                                                    @Html.AntiForgeryToken()
+                                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                    <div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
+                                                        @Html.TextBoxFor(c => c.Email, new { @class = "input100", placeholder = Resources.GlobalStrings.Email })
+                                                        @Html.ValidationMessageFor(c => c.Email, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10" data-validate="Password is required">
+                                                        @Html.TextBoxFor(c => c.Password, new { @class = "input100", placeholder = Resources.GlobalStrings.Password, @type = "password" })
+                                                        @Html.ValidationMessageFor(c => c.Password, "", new { @class = "text-danger", @style = "color:red" })
+                                                        <span class="focus-input100"></span>
+                                                        <span class="symbol-input100">
+                                                            <i class="fa fa-lock"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="container-login100-form-btn p-t-10">
+                                                        <button type="submit" class="login100-form-btn">
+                                                            @Resources.GlobalStrings.Login
+                                                        </button>
+                                                    </div>
+                                                    <div class="form-link-container clear">
+                                                        <div class="contact100-form-checkbox left">
+                                                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                                                            <label class="label-checkbox100" for="ckb1">
+                                                                @Resources.GlobalStrings.RememberMe
+                                                            </label>
+                                                        </div>
+                                                        <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#ForgotPasswordModal" class="right forget-pass preventDef close-4">  @Resources.GlobalStrings.ForgotPassword</a>
+                                                    </div>
+                                                    <div class="clear text-center create-account-container">
+                                                        <a data-toggle="modal" data-dismiss="modal" data-target="#SignUpModal" href="#" class="preventDef close-3 create-account btn-create-patient-account">  @Resources.GlobalStrings.CreateAccountNow</a>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SingUp Modal -->
+                            <div id="SignUpModal" class="modal sign-in fade auto-width" role="dialog" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <div class="wrap-sign-up-con">
+                                                <h4 class="sing-in-title blue-font-black border0bt">  @Resources.GlobalStrings.SIGNUP</h4>
+                                                <ul class="sign-up-ul-action">
+                                                    <li><a href="#" class="patient-btn active-sec">@Resources.GlobalStrings.Patient</a></li>
+                                                    <li><a href="#" class="doctor-btn">@Resources.GlobalStrings.Doctor</a></li>
+                                                </ul>
+                                                <div class="sep-div">
+                                                </div>
+                                                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "login100-form validate-form registerForm", @id = "form-patient" }))
+                                                {
+                                                    @Html.AntiForgeryToken()
+
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @Html.TextBoxFor(c => c.Email, new { @class = "input100 txtEmail", placeholder = Resources.GlobalStrings.Email })
+                                                        @Html.ValidationMessageFor(c => c.Email, "", new { @class = "text-danger", @style = "color:red" })
+
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @Html.TextBoxFor(c => c.UserName, new { @class = "input100 txtName", placeholder = Resources.GlobalStrings.Username })
+                                                        @Html.ValidationMessageFor(c => c.UserName, "", new { @class = "text-danger", @style = "color:red" })
+
+                                                    </div>
+                                                    <div class="green-color-font wrap-input100 validate-input m-b-10 padding-class password-tip">Tips: min. 8 characters, inc. numbers Uppercase</div>
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @Html.TextBoxFor(c => c.Password, new { @class = "input100 txtPassword", placeholder = Resources.GlobalStrings.Password, @type = "password" })
+                                                        @Html.ValidationMessageFor(c => c.Password, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @Html.TextBoxFor(c => c.ConfirmPassword, new { @class = "input100", placeholder = Resources.GlobalStrings.ConfirmYourPassword, @type = "password" })
+                                                        @Html.ValidationMessageFor(c => c.ConfirmPassword, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="container-login100-form-btn p-t-10 padding-class">
+                                                        <input type="submit" class="login100-form-btn" value="@Resources.GlobalStrings.Register" />
+                                                    </div>
+                                                    <div class="form-link-container clear container-login100-form-btn p-t-10">
+                                                        <div class="contact100-form-checkbox left">
+                                                            <input class="input-checkbox100 chkAccept" id="ckb642 " type="checkbox" name="accepted">
+                                                            <label class="label-checkbox100" for="ckb642">
+                                                                @Resources.GlobalStrings.IacceptedWithThe <u><a onclick="OpenTermsAndConditionModal();" href="javascript:;" class="terms">@Resources.GlobalStrings.TermsAndConditions</a></u>
+                                                            </label>
+                                                            <span class="text-danger msgErr" style="color:red;"> @Resources.GlobalStrings.YouMustAcceptTheTermsAndConditions</span>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear text-center create-account-container">
+                                                        <a data-dismiss="modal" href="#" class="preventDef create-account">@Resources.GlobalStrings.iHaveAccount</a>
+                                                    </div>
+
+                                                }
+
+                                                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "login100-form validate-form registerForm", @id = "form-doctor" }))
+                                                {
+                                                    @Html.AntiForgeryToken()
+                                                    <h4 class="text-center join-doctor">@Resources.GlobalStrings.AREYOUDoctor</h4>
+
+                                                    @*<div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                            <label> @Html.CheckBoxFor(x => x.IsInterpreter, new { @class = "", id = "IsInterpreter" })@Resources.GlobalStrings.RegisterAsInterpreted</label>
+
+                                                        </div>*@
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @Html.TextBoxFor(c => c.Name, new { @class = "input100 txtName", placeholder = Resources.GlobalStrings.Name + " (" + Resources.GlobalStrings.Required + ")" })
+                                                        @Html.ValidationMessageFor(c => c.Name, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @Html.TextBoxFor(c => c.Email, new { @class = "input100 txtEmail", placeholder = Resources.GlobalStrings.Email + " (" + Resources.GlobalStrings.Required + ")" })
+                                                        @Html.ValidationMessageFor(c => c.Email, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @if (ApplicationContext.IsArabic)
+                                                        {
+                                                            @Html.DropDownListFor(c => c.SpecialtieId, new SelectList(specialties, "Id", "TitleAr"), new { @class = "input100" })
+                                                        }
+                                                        else
+                                                        {
+                                                            @Html.DropDownListFor(c => c.SpecialtieId, new SelectList(specialties, "Id", "TitleEn"), new { @class = "input100" })
+                                                        }
+                                                        @Html.ValidationMessageFor(c => c.SpecialtieId, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+
+                                                        @Html.TextBoxFor(c => c.MobileNumber, new { @class = "input100 txtPhone", placeholder = Resources.GlobalStrings.MobileNumber + " (" + Resources.GlobalStrings.Required + ")" })
+                                                        @Html.ValidationMessageFor(c => c.MobileNumber, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @Html.TextBoxFor(c => c.Password, new { @class = "input100 txtPassword", placeholder = Resources.GlobalStrings.Password, @type = "password" })
+                                                        @Html.ValidationMessageFor(c => c.Password, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                                        @Html.TextBoxFor(c => c.ConfirmPassword, new { @class = "input100", placeholder = Resources.GlobalStrings.ConfirmYourPassword, @type = "password" })
+                                                        @Html.ValidationMessageFor(c => c.ConfirmPassword, "", new { @class = "text-danger", @style = "color:red" })
+                                                    </div>
+                                                    <div class="container-login100-form-btn p-t-10 padding-class">
+                                                        <input type="submit" class="login100-form-btn" value="@Resources.GlobalStrings.Send" />
+                                                    </div>
+                                                    <div class="form-link-container clear container-login100-form-btn p-t-10">
+                                                        <div class="contact100-form-checkbox left">
+                                                            <input class="input-checkbox100 chkAccept" id="ckb674" type="checkbox" name="accepted">
+                                                            <label class="label-checkbox100" for="ckb674">
+                                                                @Resources.GlobalStrings.IacceptedWithThe <u><a onclick="OpenTermsAndConditionModal();" href="javascript:;" class="terms">@Resources.GlobalStrings.TermsAndConditions</a></u>
+                                                            </label>
+                                                            <span class="text-danger msgErr" style="color:red;"> @Resources.GlobalStrings.YouMustAcceptTheTermsAndConditions</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear text-center create-account-container">
+                                                        <a data-dismiss="modal" href="#" class="preventDef create-account">@Resources.GlobalStrings.iHaveAccount</a>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ForgotPasswordModal Modal -->
+                            <div id="ForgotPasswordModal" class="modal sign-in fade auto-width" role="dialog" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <div class="wrap-sign-up-con">
+                                                <h4 class="sing-in-title blue-font-black text-center forgot">@Resources.GlobalStrings.ForgotPassword</h4>
+                                                @using (Ajax.BeginForm("ForgotPassword", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, ajax_Option, new { @class = "login100-form validate-form", @id = "forgetPassword", role = "form" }))
+                                                {
+
+                                                    @Html.AntiForgeryToken()
+                                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                    <ul class="forget-pass-steps">
+                                                        <li class="first-step"><span class="green-step step-circle">1</span></li>
+                                                        <li class="sep-forget"></li>
+                                                        <li class="second-step"><span class="grey-step step-circle">2</span></li>
+                                                    </ul>
+                                                    <div id="first-step-forget">
+                                                        <p class="note-sign text-center Reset-text">
+                                                            @Resources.GlobalStrings.Please_enter_your_mail_to_send_Reset_password_link
+                                                        </p>
+                                                        <div class="form-group padding-class">
+                                                            <input name="Email" class="input100 input-validation-error" data-val="true" data-val-email="The Email field is not a valid e-mail address."
+                                                                   data-val-required="The Email field is required." id="txtForgetEmail" placeholder="Email" type="text" value="" aria-invalid="true" aria-describedby="Email-error">
+
+                                                        </div>
+                                                        <button type="button" onclick="SendMail();" class="login100-form-btn Send-btn send-step">@Resources.GlobalStrings.Send</button>
+                                                        <div class="clear text-center create-account-container">
+                                                            <a data-dismiss="modal" href="#" class="preventDef create-account">@Resources.GlobalStrings.iHaveAccount</a>
+                                                        </div>
+                                                    </div>
+                                                    <div id="second-step-forget">
+                                                        <p class="note-sign text-center Reset-text">
+                                                            @Resources.GlobalStrings.ResetYourPassword
+                                                        </p>
+                                                        <div class="form-group padding-class">
+                                                            <input class="input100" data-val="true" data-val-required="The Code field is required." id="txtForgetCode" name="Code" placeholder="Code (required)" type="text" value="">
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Code" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="form-group padding-class">
+                                                            <input class="input100" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="txtForgetPassword" name="@Resources.GlobalStrings.Password" placeholder="Password" type="password" value="">
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="form-group padding-class">
+                                                            <input class="input100" data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="txtForgetConfirmPassword" name="ConfirmPassword" placeholder="Confirm your password" type="password" value="">
+                                                            <span class="field-validation-valid text-danger" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <button type="button" onclick="resetPassword();" class="login100-form-btn Send-btn save-step">@Resources.GlobalStrings.Save</button>
+                                                    </div>
+                                                    <div id="third-step-forget">
+                                                        <p class="note-sign text-center Reset-text">
+                                                            @Resources.GlobalStrings.PasswordHasBeenChangedSuccessfully
+                                                        </p>
+                                                        <div class="text-center done-container">
+                                                            <img src="~/Content/img/done.png" class="img-responsive" alt="">
+                                                        </div>
+                                                        <button type="submit" data-dismiss="modal" class="login100-form-btn Send-btn done-step">@Resources.GlobalStrings.Done</button>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="right full-width-mob">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-path">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse-path">
+                                    <ul class="nav navbar-nav navigation">
+                                        <li class="@(ViewBag.PageActiveNumber==1?"active":"")"><a href="/Home/Index">@Resources.GlobalStrings.HomePage   </a></li>
+                                        <li class="@(ViewBag.PageActiveNumber==2?"active":"")"><a href="/Home/Howitworks">@Resources.GlobalStrings.Howitworks</a></li>
+                                        <li class="@(ViewBag.PageActiveNumber==3?"active":"")"><a href="/Specialists/Index">@Resources.GlobalStrings.Specialists</a></li>
+                                        <li class="@(ViewBag.PageActiveNumber==4?"active":"")"><a href="/Doctor/Doctors">@Resources.GlobalStrings.Doctors</a></li>
+                                        <li class="@(ViewBag.PageActiveNumber==5?"active":"")"><a href="/Home/AboutUs">@Resources.GlobalStrings.AboutUs</a></li>
+                                        <li class="@(ViewBag.PageActiveNumber==6?"active":"")"><a href="/home/help">@Resources.GlobalStrings.help</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </div>
+
+                            <div class="modal sign-in fade" id="TCWindow" role="dialog">
+                                <div class="modal-dialog modal-large vertical-align-center">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="sing-in-title blue-font-black border0bt" style="display: inline-block; width:auto"> @Resources.GlobalStrings.TermsAndConditions</h3>
+                                            <button type="button" class="close close-modal-btn" data-dismiss="modal">×</button>
+                                        </div>
+                                        <div class="modal-body" id="Dv_TermsAndConditions">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p class="dark-blue-font text-right mt-3 para terms-para w-90">
+                                                        @Resources.GlobalStrings.TermsAndConditionsData
+                                                        Terms and conditions sample data As we mentioned earlier, the terms and conditions are considered a law regulating the relations between the contracting parties, and breaching these terms or not adhering to them in the prescribed manner is a breach of the principle of the agreement from the ground up and cancels it. In some contracts, the party that is not bound by his side of the agreement is punished by paying a material price, or granting the other party some privileges. The terms and conditions oblige the parties to fulfill their side of the agreement, and punish the breach of it immediately. But its importance is not limited here, as it has many other features that we will mention as follows: As we mentioned earlier, the terms and conditions are considered a law regulating the relations between the contracting parties, and breaching these terms or not adhering to them in the prescribed manner is a breach of the principle of the agreement from the ground up and cancels it. In some contracts, the party that is not bound by his side of the agreement is punished by
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="text-center"><button class="login100-form-btn nxt-stp" data-dismiss="modal" style="display: inline-block; width:auto">OK</button></div>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </section>
+    </header>
+    <!-- #header close -->
+
+
+    @RenderBody()
+    <!-- footer Start
+            ====================================================================== -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <!-- .row -->
+            <div class="row">
+                <div class="col-md-5">
+                    <div>
+                        @Resources.GlobalStrings.Copyright__Your_Medical_Consultant @DateTime.Now.Year
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <ul class="footer-links">
+                        <li class="@(ViewBag.PageActiveNumber==2?"active":"")"><a class="" href="/Home/Howitworks">@Resources.GlobalStrings.Howitworks</a></li>
+                        @*<li><a class="" href="#">@Resources.GlobalStrings.Trust_and_Quality</a></li>*@
+                        <li><a class="" onclick="OpenTermsAndConditionModal();" href="#">@Resources.GlobalStrings.TermsAndConditions</a></li>
+                        <li><a class="" href="#">@Resources.GlobalStrings.Privacy_Policy</a></li>
+                        @if (!HttpContext.Current.User.Identity.IsAuthenticated)
+                        {
+                            <li><a class="" href="#" data-toggle="modal" data-dismiss="modal" data-target="#SignInInterpreterModal">@Resources.GlobalStrings.Interpreters_Sign_in</a></li>
+                        }
+
+                    </ul>
+                </div>
+            </div>
+            <!-- .row -->
+        </div>
+        <!-- .container -->
+    </footer>
+    <!-- #footer -->
+    <div id="SignInInterpreterModal" class="modal sign-in fade" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <img src="~/Content/img/sign-in-patient-bg.png" class="img-responsive sign-in-bg" alt="">
+                    <div class="wrap-login100 p-t-190 p-b-30">
+                        <h4 class="sing-in-title blue-font-black">@Resources.GlobalStrings.SIGNIN</h4>
+                        <p class="sub-title-sign">
+                            @Resources.GlobalStrings.SignIn_header
+                        </p>
+                        @using (Ajax.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl, SignInDoctorModel = false }, ajax_Option, new { @class = "login100-form validate-form", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
+                                @Html.TextBoxFor(c => c.Email, new { @class = "input100", placeholder = Resources.GlobalStrings.Email })
+                                @Html.ValidationMessageFor(c => c.Email, "", new { @class = "text-danger", @style = "color:red" })
+                            </div>
+                            <div class="wrap-input100 validate-input m-b-10" data-validate="Password is required">
+                                @Html.TextBoxFor(c => c.Password, new { @class = "input100", placeholder = Resources.GlobalStrings.Password, @type = "password" })
+                                @Html.ValidationMessageFor(c => c.Password, "", new { @class = "text-danger", @style = "color:red" })
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </div>
+                            <div class="container-login100-form-btn p-t-10">
+                                <button type="submit" class="login100-form-btn">
+                                    @Resources.GlobalStrings.Login
+                                </button>
+                            </div>
+                            <div class="form-link-container clear">
+                                <div class="contact100-form-checkbox left">
+                                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                                    <label class="label-checkbox100" for="ckb1">
+                                        @Resources.GlobalStrings.RememberMe
+                                    </label>
+                                </div>
+                                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#ForgotPasswordModal" class="right forget-pass preventDef close-4">  @Resources.GlobalStrings.ForgotPassword</a>
+                            </div>
+                            <div class="clear text-center create-account-container">
+                                <a data-toggle="modal" data-dismiss="modal" data-target="#SignUpInterpreterModal" href="#" class="preventDef close-3 create-account btn-create-patient-account">  @Resources.GlobalStrings.CreateAccountNow</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="SignUpInterpreterModal" class="modal sign-in fade auto-width" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="wrap-sign-up-con">
+                        <h4 class="sing-in-title blue-font-black border0bt">  @Resources.GlobalStrings.SIGNUP</h4>
+
+                        <div class="sep-div">
+                        </div>
+
+
+                        @using (Html.BeginForm("RegisterInterpreter", "Account", FormMethod.Post, new { @class = "login100-form validate-form registerForm", @id = "form-interpreter" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <h4 class="text-center join-doctor">@Resources.GlobalStrings.AREYOUIninterpreter</h4>
+
+
+                            <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                @Html.TextBoxFor(c => c.Name, new { @class = "input100 txtName", placeholder = Resources.GlobalStrings.Name + " (" + Resources.GlobalStrings.Required + ")" })
+                                @Html.ValidationMessageFor(c => c.Name, "", new { @class = "text-danger", @style = "color:red" })
+                            </div>
+                            <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                @Html.TextBoxFor(c => c.Email, new { @class = "input100 txtEmail", placeholder = Resources.GlobalStrings.Email + " (" + Resources.GlobalStrings.Required + ")" })
+                                @Html.ValidationMessageFor(c => c.Email, "", new { @class = "text-danger", @style = "color:red" })
+                            </div>
+                            @*<div class="wrap-input100 validate-input m-b-10 padding-class">
+                                    @if (ApplicationContext.IsArabic)
+                                    {
+                                        @Html.DropDownListFor(c => c.SpecialtieId, new SelectList(specialties, "Id", "TitleAr"), new { @class = "input100" })
+                                    }
+                                    else
+                                    {
+                                        @Html.DropDownListFor(c => c.SpecialtieId, new SelectList(specialties, "Id", "TitleEn"), new { @class = "input100" })
+                                    }
+                                    @Html.ValidationMessageFor(c => c.SpecialtieId, "", new { @class = "text-danger", @style = "color:red" })
+                                </div>*@
+                            <div class="wrap-input100 validate-input m-b-10 padding-class">
+
+                                @Html.TextBoxFor(c => c.MobileNumber, new { @class = "input100 txtPhone", placeholder = Resources.GlobalStrings.MobileNumber + " (" + Resources.GlobalStrings.Required + ")" })
+                                @Html.ValidationMessageFor(c => c.MobileNumber, "", new { @class = "text-danger", @style = "color:red" })
+                            </div>
+                            <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                @Html.TextBoxFor(c => c.Password, new { @class = "input100 txtPassword", placeholder = Resources.GlobalStrings.Password, @type = "password" })
+                                @Html.ValidationMessageFor(c => c.Password, "", new { @class = "text-danger", @style = "color:red" })
+                            </div>
+                            <div class="wrap-input100 validate-input m-b-10 padding-class">
+                                @Html.TextBoxFor(c => c.ConfirmPassword, new { @class = "input100", placeholder = Resources.GlobalStrings.ConfirmYourPassword, @type = "password" })
+                                @Html.ValidationMessageFor(c => c.ConfirmPassword, "", new { @class = "text-danger", @style = "color:red" })
+                            </div>
+                            <div class="container-login100-form-btn p-t-10 padding-class">
+                                <input type="submit" class="login100-form-btn" value="@Resources.GlobalStrings.Send" />
+                            </div>
+                            <div class="form-link-container clear container-login100-form-btn p-t-10">
+                                <div class="contact100-form-checkbox left">
+                                    <input class="input-checkbox100 chkAccept" id="ckb674" type="checkbox" name="accepted">
+                                    <label class="label-checkbox100" for="ckb674">
+                                        @Resources.GlobalStrings.IacceptedWithThe <u><a onclick="OpenTermsAndConditionModal();" href="javascript:;" class="terms">@Resources.GlobalStrings.TermsAndConditions</a></u>
+                                    </label>
+                                    <span class="text-danger msgErr" style="color:red;"> @Resources.GlobalStrings.YouMustAcceptTheTermsAndConditions</span>
+                                </div>
+                            </div>
+                            <div class="clear text-center create-account-container">
+                                <a data-dismiss="modal" href="#" class="preventDef create-account">@Resources.GlobalStrings.iHaveAccount</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Content/js/jquery-1.12.1.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src='~/Content/js/jquery.mixitup.min.js'></script>
+    <script src="~/Content/js/slick.min.js"></script>
+    <script src="~/Content/js/wow.js"></script>
+    <script src="~/Content/js/jquery-steps.min.js"></script>
+    <script src="~/Content/js/jquery.mCustomScrollbar.js"></script>
+    <script src="~/Content/js/smooth-scrollbar.js"></script>
+    <script src="~/Content/js/main.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Content/toastr/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.min.js"></script>
+
+    <script src="~/Content/js/dropzone.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+    <script>
+         $(".contact100-form-checkbox").click(function () {
+            if ($(this).find("input[type=checkbox]").is(":checked")) {
+
+                $(this).find("input[type=checkbox]").prop("checked", false);
+            } else {
+                $(this).find("input[type=checkbox]").prop("checked", true);
+
+            }
+        })
+        $('.msgErr').hide();
+        $("input[type=submit]").click(function (e) {
+            e.preventDefault();
+
+            var currForm = $(this).parentsUntil(".registerForm").parent();
+            var isError = false;
+            var isValid = true;
+            $.each(currForm.find('input, select'), function () {
+                      $('form').validate().element($(this));
+                     if (!$(this).valid()) {
+                          isValid = false;
+                     }
+            });
+            if (isValid) {
+                $("#loader").show();
+                $.ajax({
+                    type: "get",
+                    url: "/Account/CheckUserExistance",
+                    data: { Email: currForm.find('.txtEmail').val(), Phone: currForm.find('.txtPhone').val(), UserName: currForm.find('.txtName').val(), Password: currForm.find('.txtPassword').val() },
+                    datatype: "json",
+                    traditional: true,
+                    success: function (result) {
+                        if (!currForm.find('.chkAccept').is(":checked")) {
+                            currForm.find('.chkAccept').parent().find(".msgErr").show();
+
+                            isError = true;
+                        }
+                        else {
+                            currForm.find('.chkAccept').parent().find(".msgErr").hide();
+
+                        }
+                        if (result.IsUserNameExists) {
+                            currForm.find('.txtName').next().show();
+                            currForm.find('.txtName').next().text("@Resources.GlobalStrings.Name_is_already_exists")
+                            isError = true;
+                        }
+                        else {
+                            currForm.find('.txtName').next().hide();
+
+                        }
+                        if (result.IsEmailExist) {
+                            currForm.find('.txtEmail').next().show();
+                            currForm.find('.txtEmail').next().text("@Resources.GlobalStrings.Email_is_already_exists")
+                            e.preventDefault();
+                            isError = true;
+
+
+                        }
+                        else {
+                            currForm.find('.txtEmail').next().hide();
+
+                        }
+                        if (result.IsPhoneExists && currForm.find('.txtPhone')) {
+                            currForm.find('.txtPhone').next().show();
+                            currForm.find('.txtPhone').next().text("@Resources.GlobalStrings.Phone_is_already_exists")
+                            e.preventDefault();
+                            isError = true;
+
+
+                        }
+                        else {
+                            currForm.find('.txtPhone').next().hide();
+
+
+                        }
+                        if (!result.IsPasswordGood && currForm.find('.txtPassword').length > 0) {
+                            currForm.find('.txtPassword').next().show();
+                            currForm.find('.txtPassword').next().text("@Resources.GlobalStrings.PasswordConditinal")
+                            e.preventDefault();
+                            isError = true;
+
+
+                        }
+                        else {
+                            currForm.find('.txtPhone').next().hide();
+
+
+                        }
+
+                        $("#loader").hide();
+                        if (!isError) {
+                            currForm.submit();
+                        }
+
+
+                    }, onFailure: function (ex) {
+                        alert(ex);
+                    }
+                });
+            }
+        })
+
+        function onFailure(ex) {
+           toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": 0,
+                    "extendedTimeOut": 0,
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut",
+                    "tapToDismiss": false
+                }
+                return toastr.error(ex.statusText);
+        }
+
+        function onBegin() {
+              $("#loader").show();
+        }
+
+        function onComplete() {
+            $("#loader").hide();
+        }
+
+        function success(d, da, dsa) {
+            @*if (dsa.statusText = "LOGINHOMEPAGE") {
+                if ('@User.IsInRole("Doctor")' == 'True') {
+                    location.href = "/Doctor/DoctorProfile";
+                } else if ('@User.IsInRole("Interpreter")' == 'True') {
+                    location.href = "/Interpreter/Index";
+
+                } else {
+                    location.href = "/Patient/LatestConsultations";
+                }
+               // location.reload(true);
+            }*@
+            if (dsa.statusText.indexOf("Doctor") > -1) {
+                location.href = "/Doctor/DoctorProfile";
+            } else if (dsa.statusText.indexOf("Interpreter") > -1) {
+                location.href = "/Interpreter/Index";
+            } else {
+                location.href = "/Patient/LatestConsultations";
+            }
+
+        }
+
+        function SendMail() {
+            var email = $("#txtForgetEmail").val();
+            $.ajax({
+                type: "post",
+                url: "/Account/ForgotPassword",
+                data: { Email: email },
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+                    alert("@Resources.GlobalStrings.Sent_Email_Success__Copy_Code_and_save");
+                },
+                onFailure: function (ex) {
+                    alert(ex);
+                }
+            });
+        }
+
+
+        function resetPassword() {
+            var email = $("#txtForgetEmail").val();
+            var code = $("#txtForgetCode").val();
+            var password = $("#txtForgetPassword").val();
+            var confirmPassword = $("#txtForgetConfirmPassword").val();
+            $.ajax({
+                type: "post",
+                url: "/Account/ResetPassword",
+                data: { Email: email, Code: code, Password: password, ConfirmPassword: confirmPassword },
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+
+                },
+                onFailure: function (ex) {
+                    alert(ex);
+                }
+            });
+        }
+        $(function () {
+            $.ajax({
+                type: "get",
+                url: "/Patient/GetCallRequestsCount",
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+                    $(".notification").text(data);
+
+                },
+                onFailure: function (ex) {
+                    alert(ex);
+                }
+            });
+
+            // get Contact Us Ifo
+            $.get("/Home/GetContactInfo")
+                .done(function (data) {
+                    $.each(data, function (idx, element) {
+
+                        if (element.Type ==@((int)SocialType.Phone)) {
+
+                            $("a[data-attr-type='SocialType_" + element.Type + "']").text(element.Url);
+                            $("a[data-attr-type='SocialType_" + element.Type + "']").attr("href", "tel:" + element.Url);
+
+                        } else if (element.Type ==@((int)SocialType.Mail)) {
+
+                            $("a[data-attr-type='SocialType_" + element.Type + "']").text(element.Url);
+                            $("a[data-attr-type='SocialType_" + element.Type + "']").attr("href", "mailto:" + element.Url);
+
+                        } else {
+                            $("a[data-attr-type='SocialType_" + element.Type + "']").attr("href", element.Url);
+                        }
+                    });
+
+                })
+                .fail(function () { });
+
+           @if (User.Identity.IsAuthenticated) {
+
+                if (User.IsInRole("Doctor")){
+                    <text>
+
+                              $.get("/Doctor/CheckUserCompleteProfile?doctorId=@User.Identity.GetUserId()")
+                                  .done(function (data) {
+                                      if (data == true) {
+                                          $("#hrefDoctorLink").text("@Resources.GlobalStrings.My_ProfileInfo");
+                                          $("#hrefDoctorLink").attr("href", "/Doctor/DoctorProfile");
+                                      } else {
+                                          $("#hrefDoctorLink").text("@Resources.GlobalStrings.Complete_Profile");
+                                          $("#hrefDoctorLink").attr("href", "/Home/DoctorProfileSteps");
+                                      }
+
+                                  }).fail(function () { });
+                   </text>
+                }
+                else if (User.IsInRole("Patient")){
+                     <text>
+
+                              $.get("/Patient/CheckUserCompleteProfile?patientId=@User.Identity.GetUserId()")
+                                  .done(function (data) {
+                                      if (data == true) {
+                                          $("#hrefPatientLink").text("@Resources.GlobalStrings.My_ProfileInfo");
+                                          $("#hrefPatientLink").attr("href", "/Patient/LatestConsultations");
+                                      } else {
+                                          $("#hrefPatientLink").text("@Resources.GlobalStrings.Complete_Profile");
+                                          $("#hrefPatientLink").attr("href", "/Home/PatientProfileSteps");
+                                      }
+
+                                  }).fail(function () { });
+                   </text>
+
+                }
+
+            }
+
+        });
+
+         $(".notification").click(function(event) {
+             event.stopPropagation();
+        });
+         function OpenTermsAndConditionModal() {
+             $('#TCWindow').modal('show');
+         }
+    </script>
+</body>
+</html>

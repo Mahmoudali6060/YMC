@@ -1,0 +1,352 @@
+﻿<%-- SPG:
+
+This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
+
+To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at http://sp2013/_layouts/15/ComponentHome.aspx?Url=http%3A%2F%2Fsp2013%2F%5Fcatalogs%2Fmasterpage%2FNAUSS%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
+
+--%>
+
+<%@ Master Language="C#" %>
+
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx" %>
+<%@ Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx" %>
+
+<!DOCTYPE html >
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+    <head runat="server">
+		
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+        <meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" type="image/ico" href="/_layouts/15/1025/styles/nauss/images/favicon.ico"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143819142-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+ 
+
+  gtag('config', 'UA-143819142-1');
+</script>
+<!--alzahrani code-->
+        <SharePoint:RobotsMetaTag runat="server" />
+        <SharePoint:PageTitle runat="server">
+			<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">
+            <SharePoint:ProjectProperty Property="Title" runat="server" />
+            </asp:ContentPlaceHolder>
+        </SharePoint:PageTitle>
+        <SharePoint:StartScript runat="server" />
+        <SharePoint:CssLink runat="server" Version="15"></SharePoint:CssLink>
+        <SharePoint:CacheManifestLink runat="server" />
+        <SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
+        <SharePoint:ScriptLink Language="javascript" Name="core.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink Language="javascript" Name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink Language="javascript" Name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink Language="javascript" Name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink Language="javascript" Name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+        
+        <SharePoint:CustomJSUrl runat="server" />
+        <SharePoint:SoapDiscoveryLink runat="server">
+        </SharePoint:SoapDiscoveryLink>
+        <SharePoint:AjaxDelta ID="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">
+            <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server">
+            </asp:ContentPlaceHolder>
+            <SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true">
+            </SharePoint:DelegateControl>
+            
+            <asp:ContentPlaceHolder ID="PlaceHolderBodyAreaClass" runat="server">
+            </asp:ContentPlaceHolder>
+        </SharePoint:AjaxDelta>
+        <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+        <link href="https://fonts.googleapis.com/earlyaccess/droidarabickufi.css" rel="stylesheet" type="text/css">
+        <SharePoint:CssRegistration Name="nauss/css/masterpage.css" runat="server" After="corev15.css" />
+        <SharePoint:CssRegistration Name="nauss/css/responsivemobilemenu.css" runat="server" After="corev15.css" />
+        <SharePoint:CssRegistration Name="nauss/css/res.css" runat="server" After="corev15.css" />
+        <SharePoint:CssRegistration Name="nauss/css/jquery.calendars.picker.css" runat="server" After="corev15.css" />
+        <SharePoint:AjaxDelta ID="DeltaSPWebPartManager" runat="server">
+            <WebPartPages:SPWebPartManager runat="server"/>
+        </SharePoint:AjaxDelta>
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+          <script language="javascript" src="/_layouts/15/1025/styles/nauss/js/jquery-3.4.1.min.js"></script>
+          <script language="javascript" src="/_layouts/15/1025/styles/nauss/js/angular.min.js"></script>
+		    <SharePoint:LanguageSpecificContent runat="server" Languages="1033">
+												<contenttemplate>
+            <link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/nauss/css/fonts/stylesheet.css"></link>
+</contenttemplate>
+</SharePoint:LanguageSpecificContent>
+ <SharePoint:LanguageSpecificContent runat="server" Languages="1036">
+												<contenttemplate>
+            <link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/nauss/css/fonts/stylesheet.css"></link>
+</contenttemplate>
+</SharePoint:LanguageSpecificContent>
+    </head>
+    <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();" ng-app="nauss">
+    
+        
+        <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent"/>
+        <SharePoint:ImageLink runat="server"/>
+        <SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
+            <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+            <div id="ms-designer-ribbon">
+                
+
+                <div id="TurnOnAccessibility" style="display: none" class="s4-notdlg noindex">
+                    <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
+                        <SharePoint:EncodedLiteral runat="server" Text="&lt;%$Resources:wss,master_turnonaccessibility%&gt;" EncodeMethod="HtmlEncode">
+                        </SharePoint:EncodedLiteral>
+                    </a>
+                </div>
+                <div id="TurnOffAccessibility" style="display: none" class="s4-notdlg noindex">
+                    <a id="linkTurnOffAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+                        <SharePoint:EncodedLiteral runat="server" Text="&lt;%$Resources:wss,master_turnoffaccessibility%&gt;" EncodeMethod="HtmlEncode">
+                        </SharePoint:EncodedLiteral>
+                    </a>
+                </div>
+                <PublishingRibbon:PublishingRibbon runat="server" />
+               
+
+            </div>
+
+            <div id="s4-workspace">
+                <div id="s4-bodyContainer">
+                    <div>
+                        <div class="frame header">
+                            <div class="bit-2">
+                                <div class="right"><a href="/en-us" id="enBtn">English</a><a id="arBtn" href="/ar-sa">العربية</a><span id="dtTime"></span></div>
+                            </div>
+                            <div class="bit-2">
+                                <div class="left">
+                                    <a id="loginBtn" href="/_login/default.aspx?ReturnUrl=">
+                                        <asp:Literal Text="<%$Resources:SPWorld_News,login%>" runat="server" /></a>|<a href="<asp:Literal Text='<%$Resources:SPWorld_News,localeurl%>' runat='server' />/Pages/contactUs.aspx"><asp:Literal Text="<%$Resources:SPWorld_News,contactUs%>" runat="server" /></a>|<a href="http://mail.nauss.edu.sa/"><asp:Literal Text="<%$Resources:SPWorld_News,mailbox%>" runat="server" /></a>
+                                    <span><a target='_blank' href="https://www.facebook.com/nauss.sa">
+                                        <img src="/_layouts/15/1025/styles/nauss/images/master_face_icon.png" alt=""></a><a target='_blank' href="https://twitter.com/NAUSS_SA"><img src="/_layouts/15/1025/styles/nauss/images/master_twitter_icon.png" alt=""></a></span>
+                                </div>
+                            </div>
+                            <div class="bit-2 logo">
+                                <a href="<asp:Literal Text="<%$Resources:SPWorld_News,localeurl%>" runat="server" />">
+                                          <SharePoint:LanguageSpecificContent runat="server" Languages="1025">
+												<contenttemplate>
+  <img src="/_layouts/15/1025/styles/nauss/images/master_nauss_logo.png" alt="">
+	                              </contenttemplate>
+</SharePoint:LanguageSpecificContent>
+        <SharePoint:LanguageSpecificContent runat="server" Languages="1033">
+												<contenttemplate>
+  <img src="/_layouts/15/1033/styles/nauss/images/master_nauss_logo.png" alt="">
+	                              </contenttemplate>
+</SharePoint:LanguageSpecificContent>
+        <SharePoint:LanguageSpecificContent runat="server" Languages="1036">
+												<contenttemplate>
+  <img src="/_layouts/15/1036/styles/nauss/images/master_nauss_logo.png" alt="">
+	                              </contenttemplate>
+</SharePoint:LanguageSpecificContent>
+                                </a>
+                            </div>
+                            <div class="bit-2 princes">
+                                <img src="/_layouts/15/1025/styles/nauss/images/master_princes.png" alt="">
+                            </div>
+                            <div class="clear"></div>
+                            <div class="bit-1 blueline"><span></span></div>
+                            <div class="bit-1">
+                                <div id="main-nav-bg">
+                                    <div id="search_box">
+		 <div class="ms-srch-sb ms-srch-sb-border" id="ctl00_SmallSearchInputBox1_csr_sboxdiv">
+<input type="text" placeholder="<asp:Literal Text="<%$Resources:SPWorld_News,search%>" runat="server" />..." maxlength="2048" accesskey="S" title="<asp:Literal Text="<%$Resources:SPWorld_News,search%>" runat="server" />..." id="txtSPSearch" autocomplete="off" autocorrect="off" class="ms-textSmall ms-srch-sb-prompt ms-helperText">
+<a id='btnSPSearch' title="" role="button" class="ms-srch-sb-searchLink" href="">
+<img src="/_layouts/15/images/searchresultui.png?rev=40" class="ms-srch-sb-searchImg" id="searchImg" alt="<asp:Literal Text="<%$Resources:SPWorld_News,search%>" runat="server" />">
+</a>
+</div>
+		 
+                                    </div>
+                                    <a class="toggleMenu" href="#">
+                                        <asp:Literal Text="<%$Resources:SPWorld_News,MainMenu%>" runat="server" />
+                                    </a>
+                                    
+                                    <SharePoint:AjaxDelta runat="server" BlockElement="True" ID="DeltaTopNavigation" Container="False" EnableTheming="False">
+                                        <SharePoint:DelegateControl runat="server" ID="topNavigationDelegate" ControlId="TopNavigationDataSource">
+											<Template_Controls> <asp:SiteMapDataSource  ShowStartingNode="False" StartingNodeOffset="2" SiteMapProvider="CombinedNavSiteMapProvider" ID="topSiteMap" runat="server" StartingNodeUrl="sid:1002" ></asp:SiteMapDataSource>
+									 </Template_Controls>
+                                        </SharePoint:DelegateControl>
+                                        <SharePoint:AspMenu runat="server" StartFromCurrentNode="TRUE" TreatStartingNodeAsCurrent="TRUE" UseSeparateCSS="false" AdjustForShowStartingNode="true" StaticDisplayLevels="4" AccessKey="1" SkipLinkText="" CssClass="nav" EnableViewState="False" MaximumDynamicDisplayLevels="0" UseSimpleRendering="True" DataSourceID="topSiteMap" Orientation="Horizontal" RenderingMode="List" ID="TopNavigationMenu" StaticHoverStyle="hover" StaticSelectedStyle="current">
+                                        </SharePoint:AspMenu>
+                                        
+                                    </SharePoint:AjaxDelta>
+
+                                     
+
+
+
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="frame inner_section">
+                                <asp:ContentPlaceHolder ID="PlaceHolderBreadcrumb" runat="server">
+									<div class="breadcrumb-area">
+ <div class="inner_social">
+<a href="javascript:window.print()"><img src="/_layouts/15/1025/styles/nauss/images/print.png" alt=""></a>
+<%--<a href="#"><img src="/_layouts/15/1025/styles/nauss/images/fav.png" alt=""></a>--%>
+<a href="mailto:info@nauss.edu.sa"><img src="/_layouts/15/1025/styles/nauss/images/sendtofriend.png" alt=""></a>
+</div>
+     <ul class="breadcrumb">
+<li><asp:SiteMapPath ID="SiteMapPath1"
+     runat="server"
+     SiteMapProviders="SPSiteMapProvider,SPXmlContentMapProvider"
+     RenderCurrentNodeAsLink="false"
+     NodeStyle-CssClass=""
+     CurrentNodeStyle-CssClass="active"
+     RootNodeStyle-CssClass=""
+     PathSeparator=" >> "
+     HideInteriorRootNodes="true"
+     SkipLinkText=""/></li>
+         </ul>
+     </div>
+                                </asp:ContentPlaceHolder>
+
+                                 <div class="frame">
+                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftMenu" runat="server">
+										<div class="bit-25inner">
+                                            <div class="inner_menu_area">
+                                                <p class="inner_menu_title"><asp:Literal Text="<%$Resources:SPWorld_News,MainMenu%>" runat="server" /></p>
+                                                <div class="inner_menu">
+                                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </asp:ContentPlaceHolder>
+                                            <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
+                                                                   
+
+
+                                            </asp:ContentPlaceHolder>
+                                     </div>
+                                </div>
+
+ </div>
+ 
+
+
+                      <%--  <SharePoint:AjaxDelta ID="DeltaPlaceHolderMain" IsMainContent="true" runat="server">
+                            <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
+                                <div class="DefaultContentBlock" style="border: medium black solid; background: yellow; color: black;">
+                                    This area will be filled in by content you create in your page layouts.
+                            
+                                </div>
+                            </asp:ContentPlaceHolder>
+                        </SharePoint:AjaxDelta>--%>
+
+                        <div id="footer">
+                      
+                            <div class="footer-bluebox">
+                                <div class="frame">
+                                    
+                                       <div class="bit-75">
+ <div class="right_footer">
+ <div class="footer_about">
+                                            <h6>
+                                                <asp:Literal Text="<%$Resources:SPWorld_News,naussfootertitle%>" runat="server" />
+                                            </h6>
+                                            <p>
+                                                <asp:Literal Text="<%$Resources:SPWorld_News,naussfooterdetails%>" runat="server" />
+                                            </p>
+											
+
+                                        </div>
+
+ </div>
+
+                                       <div class="left_footer">
+
+                                        <div class="footer_contact">
+                                        <h6><asp:Literal Text="<%$Resources:SPWorld_News,contactUs%>" runat="server" /></h6>
+                                            <ul class="contact_list">
+                                                <li><asp:Literal Text="<%$Resources:SPWorld_News,naussfooterpostal%>" runat="server" /></li> 
+
+                                                <li><asp:Literal Text="<%$Resources:SPWorld_News,naussfooterksa%>" runat="server" /></li> 
+
+                                                <li><asp:Literal Text="<%$Resources:SPWorld_News,naussfooteremail%>" runat="server" /></li>
+
+                                                <li><asp:Literal Text="<%$Resources:SPWorld_News,naussfooterphone%>" runat="server" /></li>
+
+
+                                            </ul>
+                                        </div>
+										
+										
+										</div>
+ </div>
+
+                                   
+                                    <div class="bit-25 logo">
+                                        <span>
+                                          
+                                            <img src="/_layouts/15/1025/STYLES/NAUSS/images/master_footer_left_logos.png" alt="">
+	                                  
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--كل الحقوق محفوظة لـ جامعة نايف العربية للعلوم الامنية © 2017-->
+                            <div class="copyright"><span><asp:Literal Text="<%$Resources:SPWorld_News,copyRightsReserved%>" runat="server" /></span></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%--<div id="navBarContainer">
+                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server" />
+            </div>--%>
+            <SharePoint:AjaxDelta ID="DeltaFormDigest" BlockElement="true" runat="server">
+                <asp:ContentPlaceHolder ID="PlaceHolderFormDigest" runat="server">
+					<SharePoint:FormDigest runat="server" />
+                </asp:ContentPlaceHolder>
+            </SharePoint:AjaxDelta>
+        </SharePoint:SharePointForm>
+        <SharePoint:AjaxDelta ID="DeltaPlaceHolderUtilityContent" runat="server">
+            <asp:ContentPlaceHolder ID="PlaceHolderUtilityContent" runat="server" />
+        </SharePoint:AjaxDelta>
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigation" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderSearchArea" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderHorizontalNav" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" Visible="False" runat="server" />
+        <%--<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" Visible="False" runat="server" />--%>
+        <asp:ContentPlaceHolder ID="PlaceHolderSiteName" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderPageImage" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" />
+        <%--<asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" Visible="False" runat="server" />--%>
+        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyRightMargin" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="WSSDesignConsole" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="SPNavigation" Visible="False" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" Visible="False" runat="server" />
+
+      
+        <script language="javascript" src="/_layouts/15/1025/styles/nauss/js/masterpage.js"></script>
+        <script language="javascript" src="/_layouts/15/1025/styles/nauss/js/spcustomdocumentuploader.js"></script>
+        <!-- It will be used for Scripts -->
+        <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchBottom" runat="server" />
+    </body>
+</SharePoint:SPHtmlTag>

@@ -1,0 +1,76 @@
+﻿@using System.Globalization
+@using Origin.YMC.Business.Entities.Domain.Patients
+@using Origin.YMC.Business.Entities.Domain.Patients.Enums
+@{
+    Layout = "~/Views/Shared/_Layout_blank_.cshtml";
+    var AdminSiteUrl = System.Configuration.ConfigurationManager.AppSettings["AdminPath"];
+    var callRequests = ((List<PatientCallRequestsViewModel>)ViewBag.CallRequests).GroupBy(a=>a.CaseCode);
+}
+    
+    <div id="content" class="content">
+        <section class="discussion-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="discussion-big-container box-shadow radius-border margin-top-10">
+                            <!-- discussion-content 1 -->
+                            @foreach (var group in callRequests)
+                            {
+                                <div class="chat-content discussion-content meeting-content">
+                                     <div class="contact-post discussion-post">
+                                         <img src="/Content/img/featuredoc2.jpg" alt="" class="mb-1">
+                                         <p style="width:87%">
+                                             <span class="discussion-owner discussion-owner-post m-0">@group.FirstOrDefault().DoctorName</span>
+                                             
+                                         </p>
+                                         <a style="pointer-events:none" class="report-btn"><img src="img/report-btn-icon.png" class="report-btn-icon" alt=""><span class="case-id-label">@Resources.GlobalStrings.CaseId</span><span>@group.Key</span></a>
+                                     </div>
+
+                                    @foreach (var item in group)
+                                    {
+                                        <div class="messages discussion-messages meeting-noti">
+                                              
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="meeting-ele meeting-title"><i class="fa fa-link"></i> Meeting Link</div>
+                                                    <div class="meeting-ele meeting-value mb-ele"><a href="@item.ZoomUrl" target="_blank" class="meeting-link">@item.ZoomUrl</a></div>
+                                                    
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="meeting-ele meeting-title"><i class="fa fa-calendar"></i> Meeting Date</div>
+                                                    <div class="meeting-ele meeting-value mb-ele">
+                                                        @if (item.MeetingDate != null)
+                                                        {
+                                                            @item.MeetingDate.Value.ToShortDateString()
+                                                        }
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="meeting-ele meeting-title"><i class="fa fa-clock-o"></i> Meeting Time</div>
+                                                    <div class="meeting-ele meeting-value mb-ele">
+                                                        @if (item.MeetingTime != null)
+                                                        {
+                                                            @item.MeetingTime.Value.ToString(@"hh\:mm")
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    }
+
+
+                                </div>
+
+
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+

@@ -1,0 +1,245 @@
+﻿@using Origin.YMC.Business.Entities.Domain.Patients.Enums
+@using Origin.YMC.Business.Entities.Domain.Patients.ViewModel
+@model CasePatientInfoViewModel
+@{
+    ViewBag.Title = "CasePatientInfo";
+    Layout = "~/Views/Shared/_Layout_blank_.cshtml";
+}
+@*@Html.DropDownListFor(x=>x.Saluation,
+    EnumHelper.GetSelectList(typeof(SaluationEnum)) ,
+    "-- Select Salutation --",
+    new { @class = "form-control" })*@
+<style>
+    .input-validation-error {
+        border: 1px solid red;
+    }
+</style>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/ar.js"></script>
+
+@using (Html.BeginForm("CasePatientInfo", "Patient", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.CaseId)
+    <div id="content" class="content">
+        <section class="wizard cardiology-section">
+            <div class="container">
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="step-content mega-container text-left box-shadow radius-border">
+                            <h1 class="section-title sub-section-title text-center fadeInLeft wow" data-wow-delay="0.5s">
+                                <span class="blue-font-light sep-before">
+                                    @Resources.GlobalStrings.Step 1: @Resources.GlobalStrings.Requestor_and_Patient_Information
+                                </span>
+                            </h1>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    @*<p class="article-p text-center">
+                                            @Resources.GlobalStrings.requesterHeader
+                                        </p>*@
+                                    <p class="article-p text-center">
+                                        <label>@Resources.GlobalStrings.Please_Note:</label> @Resources.GlobalStrings.requesterHeader2
+                                    </p>
+                                    <div class="grey-sep">
+                                    </div>
+                                    <p class="article-p text-center">
+                                        <label>@Resources.GlobalStrings.Requested_Information</label>
+                                    </p>
+                                    <p class="text-center Reset-text mini-margin">
+                                        <span class="red-color-font">*</span>@Resources.GlobalStrings.Indicates_Required_Field
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">@Resources.GlobalStrings.Salutation<span class="asteriskField">*</span></label>
+                                                @Html.DropDownListFor(x => x.Saluation, (List<SelectListItem>)ViewBag.Salutions, "--" + Resources.GlobalStrings.Select + " " + Resources.GlobalStrings.Salutation + " --", new { @class = "browser-default wizard-select" })
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">@Resources.GlobalStrings.Middle_Name</label>
+                                                @Html.TextBoxFor(x => x.MiddleName, new { @class = "input-md textinput textInput form-control", placeholder = "--" + Resources.GlobalStrings.Enter + " " + Resources.GlobalStrings.Middle_Name + " --" })
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label"> @Resources.GlobalStrings.First_name<span class="asteriskField">*</span></label>
+                                                @Html.TextBoxFor(x => x.FirstName, new { @class = "input-md textinput textInput form-control", placeholder = @Resources.GlobalStrings.Enter_First_Name })
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">@Resources.GlobalStrings.Last_name<span class="asteriskField">*</span></label>
+                                                @Html.TextBoxFor(x => x.LastName, new { @class = "input-md textinput textInput form-control", placeholder = @Resources.GlobalStrings.Enter_Last_Name })
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grey-sep">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">@Resources.GlobalStrings.Address_1</label>
+                                                @Html.TextBoxFor(x => x.Address1, new { @class = "input-md textinput textInput form-control", placeholder = @Resources.GlobalStrings.Enter_Shipping_Address })
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">@Resources.GlobalStrings.Address_2</label>
+                                                @Html.TextBoxFor(x => x.Address2, new { @class = "input-md textinput textInput form-control", placeholder = @Resources.GlobalStrings.Enter_Shipping_Address })
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label"> @Resources.GlobalStrings.State_Province_Region<span class="asteriskField">*</span></label>
+                                                @Html.TextBoxFor(x => x.Region, new { @class = "input-md textinput textInput form-control", placeholder = @Resources.GlobalStrings.Enter_Region })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label"> @Resources.GlobalStrings.Country<span class="asteriskField">*</span></label>
+                                                @Html.DropDownListFor(c => c.CountryId, new SelectList(ViewBag.countries, "Value", "Text"), new { @class = "browser-default wizard-select" })
+
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <label class="control-label">@Resources.GlobalStrings.City</label>
+                                                    @Html.DropDownListFor(x => x.CityId, new List<SelectListItem>(), "-- " + Resources.GlobalStrings.Select + "--", new { @id = "ddlCity", @class = "browser-default wizard-select" })
+
+                                                </div>
+                                                @*<div class="form-group right">
+                                                        <label class="control-label">@Resources.GlobalStrings.zip</label>
+                                                        @Html.TextBoxFor(x => x.ZipCode, new { @class = "input-md textinput textInput form-control", placeholder = @Resources.GlobalStrings.Enter_Region, type = "text" })
+
+                                                    </div>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grey-sep">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label"> @Resources.GlobalStrings.Primary_Phone_Type <span class="asteriskField">*</span></label>
+                                                @Html.DropDownListFor(x => x.PrimaryPhoneType,
+                                                     EnumHelper.GetSelectList(typeof(PhoneTypeEnum)),
+                                                     "-- " + Resources.GlobalStrings.Select_Phone_Type + " --",
+                                                     new { @class = "browser-default wizard-select" })
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label"> @Resources.GlobalStrings.Secondary_Phone_Type</label>
+                                                @Html.DropDownListFor(x => x.SecondaryPhoneType,
+                                                                                                   EnumHelper.GetSelectList(typeof(PhoneTypeEnum)),
+                                                                                                   "-- " + Resources.GlobalStrings.Select_Phone_Type + " --",
+                                                                                                   new { @class = "browser-default wizard-select" })
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">@Resources.GlobalStrings.Email <span class="asteriskField">*</span></label>
+                                                @Html.TextBoxFor(x => x.Email, new { @class = "input-md textinput textInput form-control", placeholder = "--" + @Resources.GlobalStrings.Email + "--", type = "Email" })
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">@Resources.GlobalStrings.Primary_Phone<span class="asteriskField">*</span></label>
+                                                @Html.TextBoxFor(c => c.PrimaryPhone, new { @class = "input-md textinput textInput form-control", placeholder = " - " + Resources.GlobalStrings.Enter + " - ", id = "txtPhone" })
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">@Resources.GlobalStrings.Secondary_Phone</label>
+                                                @Html.TextBoxFor(c => c.SecondaryPhone, new { @class = "input-md textinput textInput form-control", placeholder = " - " + Resources.GlobalStrings.Enter + " - ", id = "txtSecondaryPhone" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grey-sep">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-inline group-2 width-7">
+                                                <div class="form-group">
+                                                    <label class="control-label date-of-birth-uni">@Resources.GlobalStrings.Date_of_Birth</label>
+                                                    @Html.TextBoxFor(x => x.BirthDate, new { @class = "input-md textinput  form-control", placeholder = Resources.GlobalStrings.Date_of_Birth, type = "date", style = "width: 100% !important;max-width: 100% !important;" })
+
+
+                                                </div>
+                                                <div class="form-group right">
+                                                    <label class="control-label">@Resources.GlobalStrings.Gender</label>
+                                                    @Html.DropDownListFor(x => x.Gender, EnumHelper.GetSelectList(typeof(Origin.YMC.Business.Entities.Domain.GenderEnum)), "--" + Resources.GlobalStrings.Select + " " + Resources.GlobalStrings.Gender + " --", new { @class = "browser-default wizard-select" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grey-sep">
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="login100-form-btn decline-form-btn">@Resources.GlobalStrings.Cancel</button>
+                                        <button id="btnNext" class="login100-form-btn">@Resources.GlobalStrings.Next</button>
+
+                                    </div>
+                                    <div id="error" style="color:red !important;">
+                                        *@Resources.GlobalStrings.Please_fill_required_fields_first
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+}
+<script src="~/Content/js/intlTelInput.min.js"></script>
+
+<script src="~/Content/js/utils.js"></script>
+@section Scripts{
+    <script>
+        var phoneTel = intlTelInput($("#txtPhone")[0], { nationalMode: true })
+        var mobileTel = intlTelInput($("#txtSecondaryPhone")[0], { nationalMode: true })
+        $("#txtPhone")[0].addEventListener("countrychange", function () {
+            $("#txtPhone").val(phoneTel.getNumber(intlTelInputUtils.numberFormat.E164))
+        });
+        $("#txtPhone").on("change", function () {
+            $("#txtPhone").val(phoneTel.getNumber(intlTelInputUtils.numberFormat.E164))
+        })
+        $("#txtSecondaryPhone")[0].addEventListener("countrychange", function () {
+            $("#txtSecondaryPhone").val(mobileTel.getNumber(intlTelInputUtils.numberFormat.E164))
+        });
+        $("#txtSecondaryPhone").on("change", function () {
+            $("#txtSecondaryPhone").val(mobileTel.getNumber(intlTelInputUtils.numberFormat.E164))
+        })
+        $("#error").hide();
+        $("#btnNext").click(function (e) {
+            if ($("#CasePatientInfo").valid()) {
+                $("#error").hide();
+            } else {
+                $("#error").show();
+
+            }
+        })
+        $('#CountryId').change(function () {
+            $.ajax({
+                type: "post",
+                url: "/Home/GetCities",
+                data: { countryCode: $('#CountryId').val() },
+                datatype: "json",
+                traditional: true,
+                success: function (cities) {
+                    $('#ddlCity').empty();
+                    $.each(cities, function (index, item) {
+                        $('#ddlCity').append('<option value=' + item.Value + ' ' + (item.Value == '@Model.CityId' ? "selected":"" )+ ' >' + item.Text + ' </option>');
+                    });
+                }
+            });
+        });
+
+        if ('@string.IsNullOrEmpty(Model.CountryId)' == 'False') {
+            $('#CountryId').change();
+        }
+
+
+        flatpickr("#BirthDate", {
+            altInput: true,
+            altFormat: "F j, Y",
+            dateFormat: "m/d/y",
+            locale:"@Resources.GlobalStrings.locale"
+        });
+
+    </script>
+}

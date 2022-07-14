@@ -1,0 +1,75 @@
+﻿
+@using Origin.YMC.Business.Entities.Domain.Patients.ViewModel
+@model CaseSubmitViewModel
+@{
+    ViewBag.Title = "PatientSubmit";
+    Layout = "~/Views/Shared/_Layout_blank_.cshtml";
+}
+@*@Html.DropDownListFor(x=>x.Saluation,
+    EnumHelper.GetSelectList(typeof(SaluationEnum)) ,
+    "-- Select Salutation --",
+    new { @class = "form-control" })*@
+
+@using (Html.BeginForm("PatientSubmit", "Patient", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.CaseId)
+    @Html.HiddenFor(x=>x.DoctorId)
+    <div id="content" class="content">
+        <section class="wizard cardiology-section">
+            <div class="container">
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="step-content padding-30 mega-container box-shadow radius-border">
+                            <h1 class="section-title sub-section-title text-center fadeInLeft wow" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                <span class="blue-font-light sep-before">
+                                    5. @Resources.GlobalStrings.Review_and_Submit
+                                </span>
+                            </h1>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5">
+                                    <div class="text-center padding-top-60">
+                                        <div class="amount-paid-container-done">
+                                            <div class="big-checked left mar-15"><i class="fa fa-check-circle green-color-font"></i></div>
+                                            <div class="amount-labels-container text-left bounceInDown wow" style="visibility: visible; animation-name: bounceInDown;"><span class="amount-paid-value">@Model.DoctorPrice</span><span class="currency-type">@Resources.GlobalStrings.EGP</span></div>
+                                            <div class="complete-pay text-left"> @Resources.GlobalStrings.Your_payment_is_complete</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="text-center padding-top-60 hidden-mob">
+                                        <div class="sep-sec"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-5">
+                                    <div class="text-center padding-top-60">
+                                        <div class="amount-paid-container-done">
+
+                                            <div class="text-left">
+                                                <img src="img/featuredoc2.jpg" class="mar-15 left img-responsive checked-image" alt="">
+                                                <h2 class="text-left blue-color-font text-uppercase submit-done-title bounceInDown wow" style="visibility: visible; animation-name: bounceInDown;">@Model.DoctorName</h2>
+                                                <span class="black-color-font text-uppercase submit-done-title-sub">@Model.DoctorSpeciality</span>
+                                                <div><label class="black-color-font mar-15"><i class="fa fa-clock-o grey-color-font"></i> @Resources.GlobalStrings.Respones_Time</label><span class="black-color-font">@Model.DoctorResponseTime @Resources.GlobalStrings.Days</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        @*<button class="login100-form-btn decline-form-btn">@Resources.GlobalStrings.Cancel</button>*@
+                                        <button type="submit" class="login100-form-btn">@Resources.GlobalStrings.Done</button>
+                                    </div>
+                                    <div class="text-center padding-top-30"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+}

@@ -1,0 +1,209 @@
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.dll.config
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Helpers.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Mvc.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Razor.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Razor.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Helpers.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Mvc.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Razor.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Razor.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.inti.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updateUser.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.AddMobileNumber.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.entityMissing.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.UpdateEntity.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.Patient.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addDOctorEntity.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updateDoctor.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.GenerateResource.cache
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.CoreCompileInputs.cache
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.CopyComplete
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.partaion.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.TestimonialModel.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations._specialtyUpdateModel.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations._doctorUpdateModel.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.editDoctor.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.patientcaseregisteration.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addfeestodoctor.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updatedquestions.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.ResponeTimeDoctor.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.FocusOfScientificDoctor1.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addcasepatientid.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.modifypatientphysicians.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addforeignkeyforpatient.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addforeignkeyforDoctor.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.OpinionID.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addDoctorResportCase.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.countryArabicName.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.cityArabicName.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.questionThread.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreterentity.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addneedinterpreterstatus.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreterss.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreter1.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.CasePatientQuestionsAnswersinterpreter.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.medicalreportdiagnostic.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.removespecialityinterpreter.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.patientcallrequests.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updatepatientcall.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\DataAnnotationsExtensions.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.OnlineProfileDoctor.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.RemoveShippingAddress.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addclosuredate.resources
+C:\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csprojAssemblyReference.cache
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.dll.config
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.pdb
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\DataAnnotationsExtensions.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.SqlServer.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Helpers.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Mvc.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Razor.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.SqlServer.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Helpers.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Mvc.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Razor.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.AssemblyReference.cache
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.inti.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updateUser.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.AddMobileNumber.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.entityMissing.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.UpdateEntity.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.Patient.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addDOctorEntity.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updateDoctor.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.partaion.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.TestimonialModel.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations._specialtyUpdateModel.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations._doctorUpdateModel.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.editDoctor.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.patientcaseregisteration.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addfeestodoctor.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updatedquestions.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.ResponeTimeDoctor.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.FocusOfScientificDoctor1.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addcasepatientid.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.modifypatientphysicians.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addforeignkeyforpatient.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addforeignkeyforDoctor.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.OpinionID.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addDoctorResportCase.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.countryArabicName.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.cityArabicName.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.questionThread.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreterentity.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addneedinterpreterstatus.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreterss.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreter1.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.CasePatientQuestionsAnswersinterpreter.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.medicalreportdiagnostic.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.removespecialityinterpreter.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.patientcallrequests.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updatepatientcall.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.OnlineProfileDoctor.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.RemoveShippingAddress.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addclosuredate.resources
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.GenerateResource.cache
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.CoreCompileInputs.cache
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.CopyComplete
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.dll.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\Origin.YMC.Business.Entities.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\DataAnnotationsExtensions.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.SqlServer.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Helpers.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Mvc.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Razor.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Razor.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\EntityFramework.SqlServer.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Helpers.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Mvc.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.Razor.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\bin\Debug\System.Web.WebPages.Razor.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.inti.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updateUser.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.AddMobileNumber.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.entityMissing.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.UpdateEntity.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.Patient.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addDOctorEntity.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updateDoctor.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.partaion.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.TestimonialModel.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations._specialtyUpdateModel.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations._doctorUpdateModel.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.editDoctor.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.patientcaseregisteration.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addfeestodoctor.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updatedquestions.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.ResponeTimeDoctor.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.FocusOfScientificDoctor1.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addcasepatientid.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.modifypatientphysicians.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addforeignkeyforpatient.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addforeignkeyforDoctor.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.OpinionID.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addDoctorResportCase.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.countryArabicName.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.cityArabicName.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.questionThread.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreterentity.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addneedinterpreterstatus.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreterss.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.interpreter1.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.CasePatientQuestionsAnswersinterpreter.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.medicalreportdiagnostic.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.removespecialityinterpreter.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.patientcallrequests.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.updatepatientcall.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.OnlineProfileDoctor.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.RemoveShippingAddress.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.Migrations.addclosuredate.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.GenerateResource.cache
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.CoreCompileInputs.cache
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.csproj.CopyComplete
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Entities\obj\Debug\Origin.YMC.Business.Entities.pdb

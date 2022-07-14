@@ -1,0 +1,33 @@
+C:\YMC\Origin.YMC\Origin.YMC.Localization\bin\Debug\Common\GlobalStrings.resx
+C:\YMC\Origin.YMC\Origin.YMC.Localization\bin\Debug\Common\GlobalStrings.ar.resx
+C:\YMC\Origin.YMC\Origin.YMC.Localization\bin\Debug\Common\GlobalStrings.Designer.cs
+C:\YMC\Origin.YMC\Origin.YMC.Localization\bin\Debug\Common\GlobalStrings.ar.Designer.cs
+C:\YMC\Origin.YMC\Origin.YMC.Localization\bin\Debug\Origin.YMC.Localization.dll
+C:\YMC\Origin.YMC\Origin.YMC.Localization\bin\Debug\Origin.YMC.Localization.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Localization\bin\Debug\ar\Origin.YMC.Localization.resources.dll
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.csprojAssemblyReference.cache
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.Common.GlobalStrings.resources
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.Common.GlobalMessages.resources
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.Common.GlobalStrings.ar.resources
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.Common.GlobalMessages.ar.resources
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.csproj.GenerateResource.cache
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.csproj.CoreCompileInputs.cache
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\ar\Origin.YMC.Localization.resources.dll
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.dll
+C:\YMC\Origin.YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\bin\Debug\Common\GlobalStrings.resx
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\bin\Debug\Common\GlobalStrings.ar.resx
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\bin\Debug\Common\GlobalStrings.Designer.cs
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\bin\Debug\Common\GlobalStrings.ar.Designer.cs
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\bin\Debug\Origin.YMC.Localization.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\bin\Debug\Origin.YMC.Localization.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\bin\Debug\ar\Origin.YMC.Localization.resources.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.Common.GlobalStrings.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.Common.GlobalMessages.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.Common.GlobalStrings.ar.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.Common.GlobalMessages.ar.resources
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.csproj.GenerateResource.cache
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.csproj.CoreCompileInputs.cache
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\ar\Origin.YMC.Localization.resources.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Localization\obj\Debug\Origin.YMC.Localization.pdb

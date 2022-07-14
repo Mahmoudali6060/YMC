@@ -1,0 +1,126 @@
+﻿@model  List<Origin.YMC.Business.Entities.Domain.Patients.ViewModel.CaseListingViewModel>
+@using Origin.YMC.Business.Entities.Domain.Patients.Enums
+@using Origin.YMC.Business.Entities.Domain.Specialties.ViewModels
+@{
+    Layout = "~/Views/Shared/_Layout_blank_.cshtml";
+    var AdminSiteUrl = System.Configuration.ConfigurationManager.AppSettings["AdminPath"];
+    var specialties = (List<SpecialtyViewModels>)ViewBag._specialties;
+}
+@section Scripts{
+    <script>
+        function changeInterpreter(caseId) {
+            var result = confirm('@Resources.GlobalStrings.ConfrimCancelCase');
+            if (result) {
+
+                var url = "/Interpreter/changeInterpreter/";
+                debugger;
+                $.ajax({
+                    url: url,
+                    data: { caseId: caseId },
+                    cache: false,
+                    type: "POST",
+                    success: function(data) {
+                        if (data >= 0) {
+                            toastr.success('@Resources.GlobalStrings.ChangeInterpreterSuccess');
+                            setInterval(function () {
+                                location.reload(true);
+                            }, 5000);
+                        } else if (data == -2) {
+                            toastr.success('@Resources.GlobalStrings.ChangeInterpreterNotAvailable');
+                            
+
+
+                        } else {
+                            toastr.success('@Resources.GlobalStrings.errorChangeInterpreter');
+
+                        }
+
+                    },
+                    error: function(reponse) {
+
+                    }
+                });
+            }
+        }
+
+
+    </script>
+}
+<div id="content" class="content">
+    <section class="consultation-section events-sec how-it-bg">
+        <div class="container">
+            <h1 class="section-title fadeInLeft wow text-center mb-30" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                <span class="blue-font-light sep-before">
+                    @Resources.GlobalStrings.Assigned_Consultations
+                </span>
+            </h1>
+            <!-- .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="table-responsive black-text Consultations-table zoomIn wow" style="visibility: visible; animation-name: zoomIn;">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Resources.GlobalStrings.Patient_Name
+                                    </th>
+                                    <th>
+                                        @Resources.GlobalStrings.Consultation_Type
+                                    </th>
+                                    <th>
+                                        @Resources.GlobalStrings.Consultation_Status
+                                    </th>
+                                    <th>
+                                        @Resources.GlobalStrings.Consultation_Date
+                                    </th>
+                                    <th>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.Count; i++)
+                                {
+                                    <tr>
+                                        <td class="radius-left-td">
+                                            @Model[i].PatientName
+                                        </td>
+                                        <td>
+                                            @Model[i].ConsultationType
+                                        </td>
+                                        <td>
+                                            <div class="pending">
+                                                @Model[i].Status
+                                            </div>
+                                        </td>
+                                        <td>
+                                            @Model[i].ConsultationDate.ToShortDateString()
+                                        </td>
+                                        <td class="radius-right-td" style="width: 25%">
+                                            <button class="btn btn-primary display-inline ask-btn" onclick="document.location.href = '/Interpreter/ProfileOpenCase?caseId=@Model[i].CaseId'"><img src="~/content/img/ask.png"> @((Model[i].Status==StatusEnum.CaseUnderInterpretation|| Model[i].Status == StatusEnum.MedicalReportUnderInterpretation)? @Resources.GlobalStrings.Proceed: @Resources.GlobalStrings.View)  </button>
+                                           @if (@Model[i].Status == StatusEnum.CaseUnderInterpretation)
+
+                                           {
+                                               <button onclick="changeInterpreter('@Model[i].CaseId')" style="margin: 0px; min-width: auto !important;" class="btn btn-primary display-inline ask-btn cancel-ask-btn"><img src="~/content/img/close-btn.png"> @Resources.GlobalStrings.Cancel</button>
+                                           }
+                                            <div class="text-right">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- .row -->
+
+        </div>
+    </section>
+    <!-- survey -->
+
+
+</div>
+
+

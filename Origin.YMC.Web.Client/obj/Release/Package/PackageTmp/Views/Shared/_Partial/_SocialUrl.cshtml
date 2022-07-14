@@ -1,0 +1,34 @@
+﻿@using Origin.YMC.Business.Entities.Domain.SocialUrl.Enums
+
+<section class="social-bg-white text-center">
+    <div class="container">
+        <!-- .row -->
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="section-title fadeInLeft wow" data-wow-delay="0.5s">
+                    <span class="blue-font-light sep-before">
+                      @Resources.GlobalStrings.Contact_us
+                    </span>
+                </h1>
+                <div class="text-center">
+                    <ul class="social-btns zoomIn wow" data-wow-delay="0.5s">
+                        <li><a data-attr-type="SocialType_@((int)SocialType.Facebook)" class="btn facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        @*<li><a data-attr-type="SocialType_@((int)SocialType.Google)" class="btn google" href="#"><i class="fa fa-google-plus"></i></a></li>*@
+                        <li><a data-attr-type="SocialType_@((int)SocialType.LinkedIn)" class="btn linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        @*<li><a data-attr-type="SocialType_@((int)SocialType.Tumblr)" class="btn tumblr" href="#"><i class="fa fa-tumblr"></i></a></li>*@
+                        <li><a data-attr-type="SocialType_@((int)SocialType.Twitter)" class="btn twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a data-attr-type="SocialType_@((int)SocialType.Instagram)" class="btn instagram" href="#"><i class="fa fa-instagram" ></i></a></li>
+                    </ul>
+                    <ul class="call-us-list fadeInUp wow" data-wow-delay="0.5s">
+                        @*<li><a data-attr-type="SocialType_@((int)SocialType.Phone)" class="blue-font-light num-link" href="#">0044-77633-11177</a></li>*@
+                        <li>
+                            <a data-attr-type="SocialType_@((int)SocialType.Mail)" class="blue-font-light mail-link" href="mailto: SUPPORT@SECONDMEDICALOPINION.COM">
+                                SUPPORT@SECONDMEDICALOPINION.COM
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

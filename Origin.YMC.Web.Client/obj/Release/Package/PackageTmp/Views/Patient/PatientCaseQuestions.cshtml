@@ -1,0 +1,314 @@
+﻿@using Origin.YMC.Business.Entities.Domain.Patients.Enums
+@using Origin.YMC.Business.Entities.Domain.Patients.ViewModel
+@model CasePatientQuestionsViewModel
+@{
+    ViewBag.Title = "PatientCaseQuestions";
+    Layout = "~/Views/Shared/_Layout_blank_.cshtml";
+}
+@*@Html.DropDownListFor(x=>x.Saluation,
+    EnumHelper.GetSelectList(typeof(SaluationEnum)) ,
+    "-- Select Salutation --",
+    new { @class = "form-control" })*@
+<style>
+    .input-validation-error {
+        border: 1px solid red;
+    }
+</style>
+@using (Html.BeginForm("PatientCaseQuestions", "Patient", FormMethod.Post, new { id = "PatientCaseQuestions" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.CaseId)
+    <div id="content" class="content">
+        <section class="wizard cardiology-section">
+
+            <div class="container">
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="step-content mega-container text-left box-shadow radius-border">
+                            <h1 class="section-title sub-section-title text-center fadeInLeft wow" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                <span class="blue-font-light sep-before">
+                                    @Resources.GlobalStrings.Step 2  @Resources.GlobalStrings.Questionnaire_Medical_History
+                                </span>
+                            </h1>
+                            @*<p class="article-p text-center">
+                                <label> @Resources.GlobalStrings.Step 2:  </label>
+                            </p>*@
+                            <div class="grey-sep">
+                            </div>
+                            <h2 class="medical-history-title text-left edit-profile-heading xs-margin-top text-uppercase ">@Resources.GlobalStrings.General_Medical_History</h2>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group margin-top-30 slideInUp wow" style="visibility: visible; animation-name: slideInUp;">
+                                        <label class="control-label black-text">1.) @Resources.GlobalStrings.PrimaryCheifProblem  </label>
+                                        @Html.TextAreaFor(x => x.PrimaryCheifProblem, new { @class = "input-md textinput textInput form-control", rows = "5" })
+
+                                    </div>
+                                    <div class="form-group margin-top-30 slideInUp wow" style="visibility: visible; animation-name: slideInUp;">
+                                        <label class="control-label black-text">2.) @Resources.GlobalStrings.MedicalDiagnosis  </label>
+                                        @Html.TextAreaFor(x => x.MedicalDiagnosis, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                    </div>
+                                    <div class="form-inline group-2 width-5 margin-top-30">
+                                        <div class="form-group">
+                                            <label class="control-label black-text">3.) @Resources.GlobalStrings.DiagnosisDate  </label>
+                                            @Html.TextBoxFor(x => x.DiagnosisDate, new { @class = "input-md textinput textInput form-control", type = "date" })
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group margin-top-30 slideInUp wow" style="visibility: visible; animation-name: slideInUp;">
+                                        <label class="control-label black-text">
+                                            4.) @Resources.GlobalStrings.DoYouHadWorkerCompensation1 <label class="label label-info" style="color:white">@Resources.GlobalStrings.plseslct</label> @*<span class="red-color-font">@Resources.GlobalStrings.DoYouHadWorkerCompensation2</span>*@
+                                        </label>
+                                        @*<div class="contact100-form-checkbox wizard-form-content margin-top-30">
+                                            @Html.CheckBoxFor(x => x.DoYouHadWorkerCompensation, new { @class = "input-checkbox100", id = "chbt1" })
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="ckbt1">
+                                                @Resources.GlobalStrings.DoYouHadWorkerCompensation3
+                                            </label>
+                                        </div>
+                                        <div class="contact100-form-checkbox wizard-form-content">
+                                            @Html.CheckBoxFor(x => x.DoYouHadLitigation, new { @class = "input-checkbox100", id = "chbt2" })
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="chbt2">
+                                                @Resources.GlobalStrings.DoYouHadLitigation
+                                            </label>
+                                        </div>*@
+                                        <div class="contact100-form-checkbox wizard-form-content">
+                                            @Html.CheckBoxFor(x => x.AreYouCurrentlyHospitalized, new { @class = "input-checkbox100", id = "chbt3" })
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="chbt3">
+                                                @Resources.GlobalStrings.AreYouCurrentlyHospitalized
+                                            </label>
+                                        </div>
+                                        <div class="contact100-form-checkbox wizard-form-content">
+                                            @Html.CheckBoxFor(x => x.DoYouHaveSurgery, new { @class = "input-checkbox100", id = "chbt4" })
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="chbt4">
+                                                @Resources.GlobalStrings.DoYouHaveSurgery
+                                            </label>
+                                        </div>
+                                        <div class="form-group margin-top-30 slideInUp wow" >
+                                            <label class="control-label black-text">@Resources.GlobalStrings.SurgeryDates </label>
+                                            @Html.TextAreaFor(x => x.SurgeryDates, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                        </div>
+                                        <div class="contact100-form-checkbox wizard-form-content">
+                                            @Html.CheckBoxFor(x => x.NoneOfTheQuestions, new { @class = "input-checkbox100", id = "chbt5" })
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="chbt5">
+                                                @Resources.GlobalStrings.NoneOfTheQuestions
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group margin-top-30 slideInUp wow" >
+                                        <label class="control-label black-text">5.) @Resources.GlobalStrings.TreatmentRecommendations </label>
+                                        @Html.TextAreaFor(x => x.TreatmentRecommendations, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                    </div>
+                                    <div class="form-group margin-top-30 slideInUp wow" >
+                                        <label class="control-label black-text">6.) @Resources.GlobalStrings.QuestionHeader </label>
+                                        <div class="textareas-container">
+                                            <div class="Questions">
+                                                <h4 class="text-capitalize text-center"> @Resources.GlobalStrings.Questions</h4>
+                                            </div>
+                                            <div class="textareaBox">
+                                                @Html.TextAreaFor(x => x.FirstQuestion, new { @class = "input-md textinput textInput form-control", rows = "5",placeholder=Resources.GlobalStrings.writefrst })
+                                            </div>
+                                            <div class="textareaBox">
+                                                @Html.TextAreaFor(x => x.SecondQuestion, new { @class = "input-md textinput textInput form-control", rows = "5", placeholder = Resources.GlobalStrings.writescnd })
+                                            </div>
+                                            <div class="textareaBox">
+                                                @Html.TextAreaFor(x => x.ThirdQuestion, new { @class = "input-md textinput textInput form-control", rows = "5", placeholder = Resources.GlobalStrings.writethrd })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group margin-top-30 slideInUp wow" >
+                                        <label class="control-label black-text">7.) @Resources.GlobalStrings.PatientAge </label>
+                                        @Html.TextBoxFor(x => x.PatientAge, new { @class = "input-md textinput textInput form-control", type = "text" })
+                                     </div>
+                                    <div class="form-group margin-top-30 slideInUp wow" >
+                                        <label class="control-label black-text">8.) @Resources.GlobalStrings.PatientHeight: </label>
+                                        @Html.TextBoxFor(x => x.PatientHeight, new { @class = "input-md textinput textInput form-control", type = "text" })
+                                     </div>
+                                    <div class="form-group margin-top-30 slideInUp wow" >
+                                        <label class="control-label black-text">9.) @Resources.GlobalStrings.PatientWeight : </label>
+                                        @Html.TextBoxFor(x => x.PatientWeight, new { @class = "input-md textinput textInput form-control", type = "text" })
+                                     </div>
+                                    @*<div class="form-group margin-top-30 slideInUp wow" >
+                                        <label class="control-label black-text">10.)@Resources.GlobalStrings.ethnics: </label>
+                                        @{
+                                            var index = 1;
+                                            var ethnics = Enum.GetValues(typeof(EthnicOriginEnum)).Cast<EthnicOriginEnum>();
+                                        }
+                                        @foreach (var item in ethnics)
+                                        {
+
+                                            <div class="contact100-form-checkbox wizard-form-content">
+                                                <label class="radio">
+                                                    @item.ToString()  <input value="@(index++)" type="radio" checked="checked" name="EthnicOrigin">
+                                                    <span class="checkround"></span>
+                                                </label>
+                                            </div>
+                                            if (item == EthnicOriginEnum.Other)
+                                            {
+                                                <div class="form-group margin-top-30 slideInUp wow" >
+                                                    <label class="control-label black-text">@Resources.GlobalStrings.ethnics1: </label>
+                                                    @Html.TextAreaFor(x => x.OtherEthinicOrigin, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                                </div>
+                                            }
+                                        }
+                                        @Html.HiddenFor(c=>c.EthnicOrigin)
+
+
+                                    </div>*@
+
+                                    @*<div class="form-group margin-top-30 slideInUp wow" >
+                                        <label class="control-label black-text">10.)@Resources.GlobalStrings.PhysicianHeader1 </label>
+                                    </div>
+                                    <ul class="other-items-list slideInUp wow" >
+                                        <li id="liNames">
+                                            <h4 class="text-capitalize text-center">@Resources.GlobalStrings.Physician</h4>
+                                            <div class="textareaBox padding-10" data-index="0">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[0].Name, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                            </div>
+                                            <div class="textareaBox padding-10" data-index="1">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[1].Name, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                            <div class="textareaBox padding-10" data-index="2">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[2].Name, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                        </li>
+                                        <li id="liMails">
+                                            <h4 class="text-capitalize text-center">@Resources.GlobalStrings.Mailing_address</h4>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[0].MailingAddress, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                            </div>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[1].MailingAddress, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[2].MailingAddress, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                        </li>
+                                        <li id="liPhones">
+                                            <h4 class="text-capitalize text-center">@Resources.GlobalStrings.Phone_number</h4>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[0].Phone, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                            </div>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[1].Phone, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[2].Phone, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                        </li>
+                                        <li id="liFaxs">
+                                            <h4 class="text-capitalize text-center">@Resources.GlobalStrings.Fax</h4>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[0].Fax, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                            </div>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[1].Fax, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[2].Fax, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                        </li>
+                                        <li id="liEmails">
+                                            <h4 class="text-capitalize text-center">@Resources.GlobalStrings.Email</h4>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[0].Email, new { @class = "input-md textinput textInput form-control", rows = "5" })
+                                            </div>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[1].Email, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                            <div class="textareaBox padding-10">
+                                                @Html.TextAreaFor(x => x.PatientPhysicians[2].Email, new { @class = "input-md textinput textInput form-control", rows = "5", data_val = false })
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">
+                                        <a class="delete-section-btn newsection-btn no-margin other-items-list-link" id="btnAddPhysician"><i class="fa fa-plus-circle"></i>@Resources.GlobalStrings.New_Section</a>
+                                    </div>*@
+                                    <div class="text-center">
+                                        <a role="button" onclick="window.history.back();" class="login100-form-btn decline-form-btn">@Resources.GlobalStrings.Back</a>
+                                        <button class="login100-form-btn" id="btnNext">@Resources.GlobalStrings.Next</button>
+
+                                    </div>
+                                    <div id="error" style="color:red !important;">
+                                        *@Resources.GlobalStrings.Please_fill_required_fields_first
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+}
+@section Scripts{
+    <script>
+        $("#error").hide();
+
+        $("#btnNext").click(function (e) {
+            if ($("#PatientCaseQuestions").valid()) {
+                $("#error").hide();
+            } else {
+                $("#error").show();
+
+            }
+        })
+        $(".contact100-form-checkbox").click(function () {
+            if ($(this).find("input[type=checkbox]").is(":checked")) {
+
+                $(this).find("input[type=checkbox]").prop("checked", false);
+            } else {
+                $(this).find("input[type=checkbox]").prop("checked", true);
+
+            }
+            $(this).find("input[type=hidden]").remove()
+        })
+        $("#btnAddPhysician").click(function () {
+            var template = '<div class="textareaBox padding-10">\
+                                        <textarea class="input-md textinput textInput form-control" data-val="true" required="true" data-val-required="The Name field is required." id="PatientPhysicians_{index}__{prop}"  rows="5" name="PatientPhysicians[{index}].{prop}"></textarea>\
+                                    </div>';
+            var lastIndex = $("#liNames").children().last().attr("data-index");
+            var newNames = template.replaceAll('{index}', (parseInt(lastIndex) + 1)).replaceAll("{prop}", 'Name');
+            $("#liNames").append(newNames);
+            var newNames = template.replaceAll('{index}', (parseInt(lastIndex) + 1)).replaceAll("{prop}", 'MailingAddress');
+            $("#liMails").append(newNames);
+            var newNames = template.replaceAll('{index}', (parseInt(lastIndex) + 1)).replaceAll("{prop}", 'Phone');
+            $("#liPhones").append(newNames);
+            var newNames = template.replaceAll('{index}', (parseInt(lastIndex) + 1)).replaceAll("{prop}", 'Fax');
+            $("#liFaxs").append(newNames);
+            var newNames = template.replaceAll('{index}', (parseInt(lastIndex) + 1)).replaceAll("{prop}", 'Email');
+            $("#liEmails").append(newNames);
+            Phone
+        })
+
+        String.prototype.replaceAll = function (search, replacement) {
+            var target = this;
+            return target.split(search).join(replacement);
+        };
+
+        flatpickr("#DiagnosisDate", {
+            altInput: true,
+            altFormat: "F j, Y",
+            dateFormat: "m/d/y",
+        });
+
+        $('input[type=radio][name=EthnicOrigin]').change(function () {
+            if (this.value == '7') {
+                $("#OtherEthinicOrigin").attr("disabled", false);
+            }
+            else {
+                $("#OtherEthinicOrigin").attr("disabled", true);
+            }
+            $("#EthnicOrigin").val(this.value);
+        });
+
+        $(document).ready(function () {
+            
+            if ($("input[type=radio][name=EthnicOrigin]:checked").val() == "7") {
+                $("#OtherEthinicOrigin").attr("disabled", false);
+                $("#EthnicOrigin").val(7);
+            }
+        });
+    </script>
+}

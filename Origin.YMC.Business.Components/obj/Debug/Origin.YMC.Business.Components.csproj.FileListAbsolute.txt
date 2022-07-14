@@ -1,0 +1,114 @@
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.dll.config
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.SqlServer.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Core.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.CrossCutting.Framework.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Mvc.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Razor.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Razor.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.dll.config
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Core.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.dll.config
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.SqlServer.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.CrossCutting.Framework.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Mvc.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Razor.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Razor.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csprojAssemblyReference.cache
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csproj.CoreCompileInputs.cache
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csproj.CopyComplete
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.dll
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.pdb
+C:\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\DataAnnotationsExtensions.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.dll.config
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.pdb
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.SqlServer.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Core.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\DataAnnotationsExtensions.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.CrossCutting.Framework.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Mvc.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Razor.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.pdb
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.dll.config
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Core.pdb
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.pdb
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.dll.config
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.SqlServer.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.CrossCutting.Framework.pdb
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Mvc.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Razor.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csproj.AssemblyReference.cache
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csproj.CoreCompileInputs.cache
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csproj.CopyComplete
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.dll
+E:\Origin\YMC\Origin.YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.dll.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Components.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.SqlServer.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Core.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\DataAnnotationsExtensions.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.CrossCutting.Framework.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Mvc.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Razor.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Razor.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Business.Entities.dll.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Core.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.Repositories.dll.config
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\EntityFramework.SqlServer.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\Origin.YMC.CrossCutting.Framework.pdb
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Mvc.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Razor.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.Razor.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csproj.AssemblyReference.cache
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csproj.CoreCompileInputs.cache
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.csproj.CopyComplete
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.dll
+F:\Other Companies\GizaSystems\YMC\Origin.YMC.Business.Components\obj\Debug\Origin.YMC.Business.Components.pdb

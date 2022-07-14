@@ -1,0 +1,205 @@
+﻿@using Microsoft.AspNet.Identity
+@using Origin.YMC.Business.Entities.Domain.Doctors.ViewModel
+@using Origin.YMC.Business.Entities.Domain.SocialUrl.Enums
+@using Origin.YMC.Business.Entities.Domain.Patients.ViewModel
+@using System.Globalization
+@using Origin.YMC.Business.Entities.Domain.Patients.Enums
+@model CaseDetailsViewModel
+@{
+    ViewBag.Title = "Case review and submit";
+    Layout = "~/Views/Shared/_Layout_blank_.cshtml";
+}
+<!-- #content start -->
+<div id="content" class="content">
+    <section class="wizard cardiology-section">
+        <div class="container">
+            <!-- .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="step-content mega-container text-left box-shadow radius-border">
+                        <h1 class="section-title sub-section-title text-center fadeInLeft wow" data-wow-delay="0.5s">
+                            <span class="blue-font-light sep-before">
+                                5. @Resources.GlobalStrings.Review_and_Submit
+                            </span>
+                        </h1>
+                        <ul class="intro-cardiology-list">
+                            <li>
+                                <label class="green-color-font">@Resources.GlobalStrings.YouHaveSelected :</label>
+                                <span class="">@Model.CaseInfo.ConsultationType</span>
+                            </li>
+                            <li>
+                                <label class=" bold-color-font">@Resources.GlobalStrings.Registered_User:</label>
+                                <span class="">@Model.CaseInfo.PatientName</span>
+                                <div class="right">
+                                    <label>@Resources.GlobalStrings.OpinionId:</label>
+                                    <span class="">@Model.CaseInfo.OpinionID</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="text-div" style="text-align:center">
+                            <span class="label label-info" style="color:white;font-size:13pt">@Resources.GlobalStrings.CaseReviewNote</span>
+                        </div>
+                        <div class="grey-sep">
+                        </div>
+                        <h2 class="text-left edit-profile-heading xs-margin-top text-uppercase">@Resources.GlobalStrings.General_Medical_History</h2>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group margin-top-30">
+                                    <label class="control-label black-text">1.) @Resources.GlobalStrings.PrimaryCheifProblem </label>
+                                    <p class="answer-p">
+                                        @(Model.CasePatientQuestions?.PrimaryCheifProblem)
+                                    </p>
+                                </div>
+                                <div class="form-group margin-top-30">
+                                    <label class="control-label black-text">2.) @Resources.GlobalStrings.MedicalDiagnosis </label>
+                                    <p class="answer-p">
+                                        @(Model.CasePatientQuestions?.MedicalDiagnosis)
+                                    </p>
+                                </div>
+                                <div class="form-inline group-2 width-5 margin-top-30">
+                                    <div class="form-group">
+                                        <label class="control-label black-text">3.) @Resources.GlobalStrings.DiagnosisDate </label>
+                                        <p class="answer-p">
+                                            @(Model.CasePatientQuestions?.DiagnosisDate.ToString("dd/MM/yyyy", new CultureInfo("en-US", true)))
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-group margin-top-30">
+                                    @if (Model.CasePatientQuestions?.DoYouHadWorkerCompensation ?? false)
+                                    {
+                                        <div class="contact100-form-checkbox wizard-form-content">
+                                            <input class="input-checkbox100" id="ckb81" checked="checked" type="checkbox" readonly>
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="ckbt1">
+                                                @Resources.GlobalStrings.DoYouHadWorkerCompensation3
+                                            </label>
+                                        </div>
+                                    }
+
+                                    @if (Model.CasePatientQuestions?.DoYouHadLitigation ?? false)
+                                    {
+                                        <div class="contact100-form-checkbox wizard-form-content">
+                                            <input class="input-checkbox100" id="ckb81" checked="checked" type="checkbox" readonly>
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="chbt2">
+                                                @Resources.GlobalStrings.DoYouHadLitigation
+                                            </label>
+                                        </div>
+                                    }
+
+                                    @if (Model.CasePatientQuestions?.AreYouCurrentlyHospitalized ?? false)
+                                    {
+                                        <div class="contact100-form-checkbox wizard-form-content">
+                                            <input class="input-checkbox100" id="ckb81" checked="checked" type="checkbox" readonly>
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="chbt3">
+                                                @Resources.GlobalStrings.AreYouCurrentlyHospitalized
+                                            </label>
+                                        </div>
+                                    }
+
+                                    @if (Model.CasePatientQuestions?.DoYouHaveSurgery ?? false)
+                                    {
+                                        <div class="contact100-form-checkbox wizard-form-content">
+                                            <input class="input-checkbox100" id="ckb81" checked="checked" type="checkbox" readonly>
+                                            <label class="label-checkbox100  black-font-regular text-lowercase" for="chbt4">
+                                                @Resources.GlobalStrings.DoYouHaveSurgery
+                                            </label>
+                                        </div>
+                                    }
+
+                                </div>
+                                <div class="form-group margin-top-30">
+                                    <label class="control-label black-text">5.) @Resources.GlobalStrings.TreatmentRecommendations </label>
+                                    <p class="answer-p">
+                                        @(Model.CasePatientQuestions?.TreatmentRecommendations)
+                                    </p>
+                                </div>
+                                <div class="form-group margin-top-30">
+                                    <label class="control-label black-text">6.) @Resources.GlobalStrings.QuestionHeader </label>
+                                    <div class="textareas-container">
+                                        <div class="Questions">
+                                            <h4 class="text-capitalize text-center"> @Resources.GlobalStrings.Questions</h4>
+                                        </div>
+                                        <div class="textareaBox">
+                                            <label class="answer-label form-control">@(Model.CasePatientQuestions?.FirstQuestion)</label>
+                                        </div>
+                                        <div class="textareaBox">
+                                            <label class="answer-label form-control">@(Model.CasePatientQuestions?.SecondQuestion)</label>
+                                        </div>
+                                        <div class="textareaBox">
+                                            <label class="answer-label form-control">@(Model.CasePatientQuestions?.ThirdQuestion)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group margin-top-30">
+                                    <label class="control-label black-text">7.) @Resources.GlobalStrings.PatientAge </label>
+                                    <p class="answer-p">
+                                        @(Model.CasePatientQuestions?.PatientAge)
+                                    </p>
+                                </div>
+                                <div class="form-group margin-top-30">
+                                    <label class="control-label black-text">8.) @Resources.GlobalStrings.PatientHeight: </label>
+                                    <p class="answer-p">
+                                        @(Model.CasePatientQuestions?.PatientWeight)
+                                    </p>
+                                </div>
+                                <div class="form-group margin-top-30">
+                                    <label class="control-label black-text">9.) @Resources.GlobalStrings.PatientWeight: </label>
+                                    <p class="answer-p">
+                                        @(Model.CasePatientQuestions?.PatientWeight)
+                                    </p>
+                                </div>
+                                @*<div class="form-group margin-top-30">
+                                    <label class="control-label black-text">10.) @Resources.GlobalStrings.ethnics: </label>
+                                    <div class="contact100-form-checkbox wizard-form-content">
+                                        <label class="radio">
+                                            @(Model.CasePatientQuestions?.EthnicOriginDisplayName)
+                                            <input type="radio" checked="checked" name="is_company">
+                                            <span class="checkround"></span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="grey-sep">
+                                    @(Model.CasePatientQuestions?.OtherEthinicOrigin)
+                                </div>*@
+                                <h2 class="text-left edit-profile-heading xs-margin-top text-uppercase"> @Resources.GlobalStrings.Medical_Records_and_Required_Documents </h2>
+                                <ul class="docs-list text-left no-dashed">
+                                    @foreach (var item in Model.Attchments)
+                                    {
+                                        if (item.ToLower().Contains(".pdf"))
+                                        {
+
+                                            <li><a href="@item" target="_blank"><img src="~/Content/img/documnet.png" class="img-responsive" style="box-shadow: none; width: 90px;" /> </a></li>
+                                        }
+                                        else if (item.ToLower().Contains(".doc"))
+                                        {
+                                            <li><a href="@item" target="_blank"><img src="~/Content/img/word-document-icon.png" class="img-responsive" style="box-shadow: none; width: 90px;" /> </a></li>
+
+                                        }
+                                        else if (item.ToLower().Contains(".png") || item.ToLower().Contains(".jpg"))
+                                        {
+                                            <li><a href="@item" target="_blank"><img src="@item" class="img-responsive" style="box-shadow: none; width: 90px;" /> </a></li>
+                                        }
+                                        else
+                                        {
+                                            <li><a href="@item" target="_blank"><img src="~/Content/img/certifications-icon.png" class="img-responsive" style="box-shadow: none; width: 90px;" /> </a></li>
+
+                                        }
+                                    }
+                                </ul>
+                                <div class="grey-sep">
+                                </div>
+                                <div class="text-center">
+                                    <a role="button" onclick="window.history.back();" class="login100-form-btn decline-form-btn">@Resources.GlobalStrings.Back</a>
+                                    <a class="login100-form-btn" href="/Patient/PatientCaseSubmit?CaseId=@Model.CaseInfo.CaseId">@Resources.GlobalStrings.Submit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- #content -->

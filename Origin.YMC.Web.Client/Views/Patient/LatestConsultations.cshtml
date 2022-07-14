@@ -1,0 +1,262 @@
+﻿@model  List<Origin.YMC.Business.Entities.Domain.Patients.ViewModel.CaseListingViewModel>
+@using Origin.YMC.Business.Entities.Domain.Patients.Enums
+@using Origin.YMC.Business.Entities.Domain.Specialties.ViewModels
+@{
+    Layout = "~/Views/Shared/_Layout_blank_.cshtml";
+    var AdminSiteUrl = System.Configuration.ConfigurationManager.AppSettings["AdminPath"];
+    var specialties = (List<SpecialtyViewModels>)ViewBag._specialties;
+}
+
+<div id="content" class="content">
+    <section class="consultation-section events-sec how-it-bg">
+        <div class="container">
+            <h1 class="section-title fadeInLeft wow text-center" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                <span class="blue-font-light sep-before">
+                    @Resources.GlobalStrings.My_ProfileInfo 
+                </span>
+            </h1>
+            <!-- .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="wizard" class="wizard fadeInUp wow insiderWizard">
+                        <div class="step-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label bold-font">@Resources.GlobalStrings.Name : </label>
+                                        <label class="control-label"> @ViewBag._patientUserInfo.FirstName @ViewBag._patientUserInfo.LastName </label>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label bold-font"> @Resources.GlobalStrings.Country : </label>
+                                        <label class="control-label"> @ViewBag._patientUserInfo.CityName</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label bold-font"> @Resources.GlobalStrings.Email : </label>
+                                        <label class="control-label"> @ViewBag._patientUserInfo.Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label bold-font">@Resources.GlobalStrings.Date_of_Birth : </label>
+                                        <label class="control-label"> @ViewBag._patientUserInfo.Day/@ViewBag._patientUserInfo.Month/@ViewBag._patientUserInfo.Year </label>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label bold-font"> @Resources.GlobalStrings.Gender : </label>
+                                        @if (ApplicationContext.IsArabic)
+                                        {
+                                            <label class="control-label"> @(ViewBag._patientUserInfo.GenderId == 1 ? "ذكر" : "أنثى")</label>
+                                        }
+                                        else
+                                        {
+                                            <label class="control-label"> @(ViewBag._patientUserInfo.GenderId == 1 ? "Male" : "Female")</label>
+                                        }
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label bold-font"> @Resources.GlobalStrings.Address1 : </label>
+                                        <label class="control-label"> @ViewBag._patientUserInfo.Address1</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="section-title fadeInLeft wow text-center mb-30" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                <span class="blue-font-light sep-before">
+                    @Resources.GlobalStrings.latest_Consultations
+                </span>
+            </h1>
+            <!-- .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="table-responsive black-text Consultations-table zoomIn wow" style="visibility: visible; animation-name: zoomIn;">
+                      @if (Model.Count > 0)
+                      {
+
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Resources.GlobalStrings.CaseId
+                                    </th>
+                                    <th>
+                                        @Resources.GlobalStrings.Patient_Name
+                                    </th>
+                                    <th>
+                                        @Resources.GlobalStrings.Consultation_Type
+                                    </th>
+                                    <th>
+                                        @Resources.GlobalStrings.Consultation_Status
+                                    </th>
+                                    <th>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.Count; i++)
+                                {
+                                    <tr>
+                                        <td class="radius-left-td">
+                                             @*/Doctor/ProfileOpenCase?caseId=27067c90-fe18-41dc-a68b-a02e2ffeeae6*@
+                                            <a class="caseId" href="/Doctor/ProfileOpenCase?caseId=@Model[i].CaseId">@Model[i].OpinionID</a>
+                                            
+                                        </td>
+                                        <td class="">
+                                            @Model[i].PatientName
+                                        </td>
+                                        <td>
+                                            @Model[i].ConsultationType
+                                        </td>
+                                        <td>
+                                            <div class="pending">
+                                                @Model[i].Status
+                                            </div>
+                                        </td>
+                                        <td class="radius-right-td">
+                                            <div class="text-right">
+                                                @if (Model[i].Status == StatusEnum.Closed)
+                                                {
+                                                    <button class="btn btn-primary display-inline ask-btn" onclick="AddCallRequest('@Model[i].CaseId')"><img src="~/content/img/ask.png"> @Resources.GlobalStrings.Request_Call</button>
+                                                }
+                                                <button class="btn btn-primary display-inline ask-btn" onclick="document.location.href = '/QuestionThreads/Questions?caseId=@Model[i].CaseId'"><img src="~/content/img/ask.png"> @Resources.GlobalStrings.Questions_Threads</button>
+                                                <button class="btn btn-primary display-inline ask-btn" onclick="document.location.href = '/Doctor/ProfileOpenCase?caseId=@Model[i].CaseId'"> @Resources.GlobalStrings.DisplayCase</button>
+                                                @*<button class="btn btn-primary display-inline ask-btn cancel-ask-btn"><img src="~/content/img/close-btn.png"> @Resources.GlobalStrings.Cancel</button>*@
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+                      }
+                      else
+                      {
+                        <div class="alert alert-info text-center">@Resources.GlobalStrings.NoConsultationFound   </div>
+                      }</div>
+                </div>
+            </div>
+            <!-- .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="step-content padding-30 mega-container box-shadow radius-border white-bg">
+                        <h1 class="sub-section-title-mini text-center fadeInLeft wow" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                            <span class="blue-color-font font-bold">
+                                @Resources.GlobalStrings.ConsultationTypeHeader
+                            </span>
+                        </h1>
+                        <div class="row">
+                            @foreach (var Specialty in specialties)
+                            {
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                    <a href="/Doctor/Doctors?specialtyId=@Specialty.Id" class="specialist-item text-center slideInUp wow" style="visibility: visible; animation-name: slideInUp;">
+                                        <img src="@AdminSiteUrl/@Specialty.ImageUrl" class="img-responsive" alt="">
+                                        <span class="text-uppercase specialist-label">
+
+                                            @if (ApplicationContext.IsArabic)
+                                            {
+                                                @:@Specialty.TitleAr
+                                            }
+                                            else
+                                            {
+                                                @:@Specialty.TitleEn
+                                            }
+                                        </span>
+                                    </a>
+                                </div>
+                            }
+
+
+                            @*<div class="col-xs-12 text-center">
+                                    <a href="#" class="grey-color-font more-show-btn margin-top-30 fadeInUp wow" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"><i class="fa fa-caret-down"></i>show More</a>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- survey -->
+    <section id="user-survey" class="user-survey">
+        <div class="user-survey-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" onclick="$('.user-survey').hide();" class="close close-survey">×</button>
+
+                    <div class="wrapp-t-190 p-b-30">
+                        <h4 class="sing-in-title blue-font-black">@Resources.GlobalStrings.survey</h4>
+
+                        <div class="form-group margin-top-30">
+                            <label class="control-label black-text">@Resources.GlobalStrings.surveyQuetion1 </label>
+                            <textarea id="txt_testimonial" class="input-md textinput textInput form-control" rows="5"></textarea>
+                        </div>
+                        <div class="container-login100-form-btn send-survey p-t-10">
+                            <button onclick="AddTestimonial();" class="login100-form-btn">
+                                @Resources.GlobalStrings.Send
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @Html.Partial("~/Views/Shared/_Partial/_Testimonial.cshtml")
+    <!-- social Links -->
+    @Html.Partial("~/Views/Shared/_Partial/_SocialUrl.cshtml")
+</div>
+
+@section Scripts{
+    <script src="~/Content/js/@Resources.GlobalStrings.doctor_profile_js"></script>
+
+    <script type="text/javascript">
+        function AddTestimonial() {
+            debugger;
+            $.ajax({
+                url: '/Patient/AddTestimonial/',
+                data: { testimonial: $('#txt_testimonial').val() },
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    if (data >= 1) {
+                        toastr.success('@Resources.GlobalStrings.Addsurveysuccess');
+                        $('.user-survey').hide();
+
+                    }
+                    else {
+                        toastr.error('@Resources.GlobalStrings.Addsurveyfail');
+                    }
+                },
+                error: function (reponse) {
+                    toastr.error('@Resources.GlobalStrings.Addsurveyfail');
+                }
+            });
+        }
+        function AddCallRequest(caseId) {
+            debugger;
+            $.ajax({
+                url: '/Patient/AddCallRequest/',
+                data: { caseId: caseId },
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    if (data >= 1) {
+                        toastr.success('@Resources.GlobalStrings.AddCallRequestsuccess');
+                        $('.user-survey').hide();
+
+                    }
+                    else {
+                        toastr.error('@Resources.GlobalStrings.AddCallRequestfail');
+                    }
+                },
+                error: function (reponse) {
+                    toastr.error('@Resources.GlobalStrings.Addsurveyfail');
+                }
+            });
+        }
+    </script>
+}

@@ -1,0 +1,200 @@
+﻿@model Origin.YMC.Business.Entities.Domain.Doctors.ViewModel.DoctorViewModels
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">@Model.FirstName Profile<span></span></h2>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+
+
+<div class="row">
+
+    <!-- /.col-lg-12 -->
+    <div class="col-lg-12">
+        <nav>
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active">
+                    <a href="#1t" data-toggle="tab">@Model.FirstName Profile Info</a>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="tab-content clearfix">
+            <div class="tab-pane active" id="1t">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>First Name:</label>
+                                    <label>@Model.FirstName</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Last Name:</label>
+                                    <label>@Model.LastName</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Email:</label>
+                                    <label>@Model.Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Date Of Birth:</label>
+                                    <label>@Model.Day-@Model.Month-@Model.Year</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>City Name:</label>
+                                    <label>@Model.CityName</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Non Us State Or Province:</label>
+                                    <label>@Model.NonUsStateOrProvince</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Address1:</label>
+                                    <label>@Model.Address1</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Address2:</label>
+                                    <label>@Model.Address2</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Mobile Phone:</label>
+                                    <label>@Model.MobilePhone</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Phone:</label>
+                                    <label>@Model.Phone</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Heard About Us:</label>
+                                    <label>@(Origin.YMC.Core.Content.StaticContent.GetAllHeardAboutUs().FirstOrDefault(c => c.Value == Model.HeardAboutUsId).Name)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Refrances:</label>
+                                    @{
+                                        var refDoctor = Model.Refrances != null ? Model.Refrances.Split(new string[] { ";#" }, StringSplitOptions.None) : null;
+                                        var expDoctor = Model.Experinces != null ? Model.Experinces.Split(new string[] { ";#" }, StringSplitOptions.None) : null;
+                                    }
+                                    <ul>
+                                        @if (refDoctor != null)
+                                        {
+                                            foreach (var ref_ in refDoctor)
+                                            {
+
+                                                <li>@ref_</li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Specialtie:</label>
+                                    <label>@Model.SpecialtyName</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Experinces:</label>
+                                    <ul>
+                                        @if (expDoctor != null)
+                                        {
+                                            foreach (var ref_ in expDoctor)
+                                            {
+
+                                                <li><span>@ref_</span></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Creation Date:</label>
+                                    <label>@Model.CreationDate.ToString("dd-MM-yyyy")</label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Certificates:</label>
+                                    <div class="input-group">
+                                        @{
+                                            var ClientAdminPath = System.Configuration.ConfigurationManager.AppSettings["CleintPath"];
+                                        }
+                                        <label class="input-group-btn"></label>
+                                        <table class="table table-condensed table-bordered">
+                                            @for (int i = 0; i < Model.Certificates.Count; i++)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <img src="@ClientAdminPath/@Model.Certificates[i]" style="width:200px;height:200px;" />
+                                                    </td>
+                                                    <td> <a href="@ClientAdminPath/@Model.Certificates[i]">Link</a></td>
+                                                </tr>
+                                            }
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

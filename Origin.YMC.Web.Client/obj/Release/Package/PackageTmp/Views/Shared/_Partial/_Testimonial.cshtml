@@ -1,0 +1,92 @@
+﻿@using Origin.YMC.Business.Entities.Domain.Testimonials.ViewModels
+
+<section class="students-section">
+    <div class="students-section-bg">
+        <div class="container">
+            <!-- .row -->
+            <div class="row">
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <h1 class="section-title fadeInLeft wow" data-wow-delay="0.5s">
+                        <div class="font-light">
+                            @Resources.GlobalStrings.What_our
+                        </div>
+                        <div class="font-black">
+                            @Resources.GlobalStrings.patients
+                        </div>
+                        <span class="font-light sep-before">@Resources.GlobalStrings.have_to</span><span class="font-black"> @Resources.GlobalStrings.say</span>
+                    </h1>
+                </div>
+                <div class="col-md-6 col-sm-7 col-xs-12">
+                    <div class="slider-nav wow fadeInUp" data-wow-delay="0.5s">
+
+                        @foreach (var testimonial in (List<TestimonialViewModel>)ViewBag._testimonials)
+                        {
+                            <div>
+                                @*<img src="@testimonial.PatientImageURL" class="img-responsive" alt="">*@
+                                <div class="circle-counter">1</div>
+                            </div>
+                        }
+                        <div>
+                            <div class="circle-counter">2</div>
+                        </div>
+                        <div>
+                            <div class="circle-counter">3</div>
+                        </div>
+                        <div>
+                            <div class="circle-counter">4</div>
+                        </div>
+                        <div>
+                            <div class="circle-counter">5</div>
+                        </div>
+                        <div>
+                            <div class="circle-counter">6</div>
+                        </div>
+                    </div>
+                    <div class="slider-for animate-slider wow fadeInDown" data-wow-delay="0.5s">
+
+                        @foreach (var testimonial in (List<TestimonialViewModel>)ViewBag._testimonials)
+                        {
+                            <div>
+                                <h4 class="name-slick text-uppercase">@testimonial.PatientName</h4>
+                                @*<h5 class="title-slick">@Resources.GlobalStrings.Doctor</h5>*@
+                                <p class="about-slick">
+                                    <span class="double-quotes quotes-left">“</span> @testimonial.TextReview <span class="double-quotes">”</span>
+                                </p>
+                            </div>
+                        }
+                        <div>
+                            <h4 class="name-slick text-uppercase">patient osama</h4>
+                            <p class="about-slick">
+                                <span class="double-quotes quotes-left">“</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<span class="double-quotes">”</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="name-slick text-uppercase">Mohamed Gouda</h4>
+                            <p class="about-slick">
+                                <span class="double-quotes quotes-left">“</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<span class="double-quotes">”</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="name-slick text-uppercase">Mohamed enein</h4>
+                            <p class="about-slick">
+                                <span class="double-quotes quotes-left">“</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<span class="double-quotes">”</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="name-slick text-uppercase">patient Gouda</h4>
+                            <p class="about-slick">
+                                <span class="double-quotes quotes-left">“</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<span class="double-quotes">”</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="name-slick text-uppercase">Mohamed enein</h4>
+                            <p class="about-slick">
+                                <span class="double-quotes quotes-left">“</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<span class="double-quotes">”</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
