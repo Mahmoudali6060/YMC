@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29418.71
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.2092
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{E240A4BC-B2FB-4C52-B520-6C1802A75DA4}"
 EndProject
@@ -17,8 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Origin.YMC.Business.Components", "Origin.YMC.Business.Components\Origin.YMC.Business.Components.csproj", "{8C67A0E0-B54E-4E6B-A254-CCD25B1780D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Origin.YMC.Business.Entities", "Origin.YMC.Business.Entities\Origin.YMC.Business.Entities.csproj", "{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Origin.YMC.Core", "Origin.YMC.Core\Origin.YMC.Core.csproj", "{F3E5EF80-3E62-425D-85D8-88D6A6FC8CB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Origin.YMC.CrossCutting.Framework", "Origin.YMC.CrossCutting.Framework\Origin.YMC.CrossCutting.Framework.csproj", "{823BF985-792E-4E63-A147-0EC7AEEA027E}"
@@ -33,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Origin.YMC.Web.Admin", "Ori
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Origin.YMC.Localization", "Origin.YMC.Localization\Origin.YMC.Localization.csproj", "{D8450A12-397B-4568-A6DA-2FBAB3C8B869}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Origin.YMC.Business.Entities", "Origin.YMC.Business.Entities\Origin.YMC.Business.Entities.csproj", "{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,10 +43,6 @@ Global
 		{8C67A0E0-B54E-4E6B-A254-CCD25B1780D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C67A0E0-B54E-4E6B-A254-CCD25B1780D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C67A0E0-B54E-4E6B-A254-CCD25B1780D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F3E5EF80-3E62-425D-85D8-88D6A6FC8CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F3E5EF80-3E62-425D-85D8-88D6A6FC8CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3E5EF80-3E62-425D-85D8-88D6A6FC8CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,13 +71,16 @@ Global
 		{D8450A12-397B-4568-A6DA-2FBAB3C8B869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8450A12-397B-4568-A6DA-2FBAB3C8B869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8450A12-397B-4568-A6DA-2FBAB3C8B869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8C67A0E0-B54E-4E6B-A254-CCD25B1780D7} = {E240A4BC-B2FB-4C52-B520-6C1802A75DA4}
-		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6} = {E240A4BC-B2FB-4C52-B520-6C1802A75DA4}
 		{F3E5EF80-3E62-425D-85D8-88D6A6FC8CB0} = {ED956749-4EAA-4377-B5D0-4AE26B019BD6}
 		{823BF985-792E-4E63-A147-0EC7AEEA027E} = {998DE335-4324-4FDD-BF5F-FF0736D70973}
 		{7BD66302-3070-4431-B65D-738BA4BF2406} = {710B5A1B-0DCA-4611-BD19-124E011165EF}
@@ -89,50 +88,9 @@ Global
 		{49F03F38-A266-4C8C-BA76-81D1B53A1EE4} = {1DF40701-72FA-4F7B-BD52-BD631F06B192}
 		{F2F85FF6-E6E7-4F3E-BDF0-79655002208E} = {1DF40701-72FA-4F7B-BD52-BD631F06B192}
 		{D8450A12-397B-4568-A6DA-2FBAB3C8B869} = {ED956749-4EAA-4377-B5D0-4AE26B019BD6}
+		{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6} = {E240A4BC-B2FB-4C52-B520-6C1802A75DA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8CFA5866-0102-4018-A769-2A75707E027E}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 10
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dev.azure.com/origintechnologysolutions
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Origin.YMC.Business.Components\\Origin.YMC.Business.Components.csproj
-		SccProjectTopLevelParentUniqueName1 = Origin.YMC.sln
-		SccProjectName1 = Origin.YMC.Business.Components
-		SccLocalPath1 = Origin.YMC.Business.Components
-		SccProjectUniqueName2 = Origin.YMC.Business.Entities\\Origin.YMC.Business.Entities.csproj
-		SccProjectTopLevelParentUniqueName2 = Origin.YMC.sln
-		SccProjectName2 = Origin.YMC.Business.Entities
-		SccLocalPath2 = Origin.YMC.Business.Entities
-		SccProjectUniqueName3 = Origin.YMC.Core\\Origin.YMC.Core.csproj
-		SccProjectTopLevelParentUniqueName3 = Origin.YMC.sln
-		SccProjectName3 = Origin.YMC.Core
-		SccLocalPath3 = Origin.YMC.Core
-		SccProjectUniqueName4 = Origin.YMC.CrossCutting.Framework\\Origin.YMC.CrossCutting.Framework.csproj
-		SccProjectTopLevelParentUniqueName4 = Origin.YMC.sln
-		SccProjectName4 = Origin.YMC.CrossCutting.Framework
-		SccLocalPath4 = Origin.YMC.CrossCutting.Framework
-		SccProjectUniqueName5 = Origin.YMC.Repositories\\Origin.YMC.Repositories.csproj
-		SccProjectTopLevelParentUniqueName5 = Origin.YMC.sln
-		SccProjectName5 = Origin.YMC.Repositories
-		SccLocalPath5 = Origin.YMC.Repositories
-		SccProjectUniqueName6 = Origin.YMC.Web.Services.Api\\Origin.YMC.Web.Services.Api.csproj
-		SccProjectTopLevelParentUniqueName6 = Origin.YMC.sln
-		SccProjectName6 = Origin.YMC.Web.Services.Api
-		SccLocalPath6 = Origin.YMC.Web.Services.Api
-		SccProjectUniqueName7 = Origin.YMC.Web.Client\\Origin.YMC.Web.Client.csproj
-		SccProjectTopLevelParentUniqueName7 = Origin.YMC.sln
-		SccProjectName7 = Origin.YMC.Web.Client
-		SccLocalPath7 = Origin.YMC.Web.Client
-		SccProjectUniqueName8 = Origin.YMC.Web.Admin\\Origin.YMC.Web.Admin.csproj
-		SccProjectTopLevelParentUniqueName8 = Origin.YMC.sln
-		SccProjectName8 = Origin.YMC.Web.Admin
-		SccLocalPath8 = Origin.YMC.Web.Admin
-		SccProjectUniqueName9 = Origin.YMC.Localization\\Origin.YMC.Localization.csproj
-		SccProjectTopLevelParentUniqueName9 = Origin.YMC.sln
-		SccProjectName9 = Origin.YMC.Localization
-		SccLocalPath9 = Origin.YMC.Localization
 	EndGlobalSection
 EndGlobal

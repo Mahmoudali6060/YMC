@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Origin.YMC.Business.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using Origin.YMC.Business.Entities;
 
 namespace Origin.YMC.Repositories
 {

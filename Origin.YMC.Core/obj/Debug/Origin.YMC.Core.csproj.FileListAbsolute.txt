@@ -15,3 +15,8 @@ F:\Other Companies\GizaSystems\YMC\Origin.YMC.Core\bin\Debug\Origin.YMC.Core.pdb
 F:\Other Companies\GizaSystems\YMC\Origin.YMC.Core\obj\Debug\Origin.YMC.Core.csproj.CoreCompileInputs.cache
 F:\Other Companies\GizaSystems\YMC\Origin.YMC.Core\obj\Debug\Origin.YMC.Core.dll
 F:\Other Companies\GizaSystems\YMC\Origin.YMC.Core\obj\Debug\Origin.YMC.Core.pdb
+E:\Other Companies\GizaSystems\YMC_New\YMC\Origin.YMC.Core\bin\Debug\Origin.YMC.Core.dll
+E:\Other Companies\GizaSystems\YMC_New\YMC\Origin.YMC.Core\bin\Debug\Origin.YMC.Core.pdb
+E:\Other Companies\GizaSystems\YMC_New\YMC\Origin.YMC.Core\obj\Debug\Origin.YMC.Core.csproj.CoreCompileInputs.cache
+E:\Other Companies\GizaSystems\YMC_New\YMC\Origin.YMC.Core\obj\Debug\Origin.YMC.Core.dll
+E:\Other Companies\GizaSystems\YMC_New\YMC\Origin.YMC.Core\obj\Debug\Origin.YMC.Core.pdb

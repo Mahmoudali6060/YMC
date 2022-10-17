@@ -7,15 +7,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
-using Origin.YMC.Business.Entities.Domain.Patients.ViewModel;
-using Origin.YMC.Business.Entities.Domain.Payments.ViewModel;
-using Origin.YMC.Business.Entities.Domain;
-using Origin.YMC.Business.Entities.Domain.Doctors.ViewModel;
 using System.IO;
 using System.Threading.Tasks;
 using Origin.YMC.Business.Components.ViewModels;
 using Origin.YMC.Business.Entities.Domain.Patients.Enums;
-using Origin.YMC.Business.Entities.Domain.Testimonials;
 
 namespace Origin.YMC.Web.Client.Controllers
 {

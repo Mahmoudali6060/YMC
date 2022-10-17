@@ -7,8 +7,6 @@ using Microsoft.Owin;
 using Origin.YMC.Business.Entities;
 using Origin.YMC.Business.Entities.Domain;
 
-
-
 namespace Origin.YMC.Web.Admin
 {
     public class ApplicationUserManager : UserManager<ApplicationUser, Guid>

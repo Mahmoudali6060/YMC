@@ -18,6 +18,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -74,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Origin.YMC.Business.Entities\Origin.YMC.Business.Entities.csproj">
-      <Project>{4aa4dc7b-0ea3-40d1-81ed-460ae3d318c6}</Project>
+      <Project>{4AA4DC7B-0EA3-40D1-81ED-460AE3D318C6}</Project>
       <Name>Origin.YMC.Business.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Origin.YMC.CrossCutting.Framework\Origin.YMC.CrossCutting.Framework.csproj">
